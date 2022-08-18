@@ -44,7 +44,7 @@ gulp.task('hello', () => {
 gulp.task('browser-sync', () => {
   browserSync({ // Выполняем browser Sync
     server: { // Определяем параметры сервера
-      baseDir: 'dist', // Директория для сервера - app
+      baseDir: 'docs', // Директория для сервера - app
     },
     notify: false,
     online: true, // Отключаем уведомления
@@ -130,13 +130,13 @@ gulp.task('buildJs', () => src([
 // Обработка HTML
 gulp.task('html', () => src(['app/**/*.html', '!app/components/**/*.html']) // собираем файлы для отслеживания
   .pipe(include())
-  .pipe(dest('dist'))
+  .pipe(dest('docs'))
   .pipe(browserSync.reload({ stream: true }))); // обновляем браузер
 
 // Обработка PHP
 gulp.task('php', () => src('app/**/*.php')
   .pipe(include())
-  .pipe(dest('dist'))
+  .pipe(dest('docs'))
   .pipe(browserSync.reload({ stream: true }))); // обновляем браузер
 
 // Обработка растровых изображений - delete
@@ -289,7 +289,7 @@ gulp.task('watch', () => {
   watch('app/fonts/**/*.ttf', series('ttf', 'fonts'));
 });
 
-// Удаляем папку dist перед сборкой
+// Удаляем папку docs перед сборкой
 gulp.task('clean', async () => del.sync('docs/**/*'));
 
 // Подзадачи сборки
