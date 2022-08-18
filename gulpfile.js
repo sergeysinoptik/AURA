@@ -228,7 +228,7 @@ gulp.task('ttf', (done) => {
   src('app/fonts/**/*.ttf')
     .pipe(changed('docs/fonts', {
       extension: '.woff2',
-      hasChanged: changed.compareLastModifiedTime
+      hasChanged: changed.compareLastModifiedTime,
     }))
     .pipe(ttf2woff2())
     .pipe(dest('docs/fonts'));
@@ -236,7 +236,7 @@ gulp.task('ttf', (done) => {
   src('app/fonts/**/*.ttf')
     .pipe(changed('docs/fonts', {
       extension: 'woff',
-      hasChanged: changed.compareLastModifiedTime
+      hasChanged: changed.compareLastModifiedTime,
     }))
     .pipe(ttf2woff())
     .pipe(dest('docs/fonts'));
