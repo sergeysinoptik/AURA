@@ -226,12 +226,12 @@ gulp.task('svgsprite', () => src('app/svg/**/*.svg') // More: https://habr.com/r
 
 gulp.task('ttf', (done) => {
   src('app/fonts/**/*.ttf')
-    .pipe(changed('dest/fonts', {
+    .pipe(changed('dist/fonts', {
       extension: '.woff2',
       hasChanged: changed.compareLastModifiedTime
     }))
     .pipe(ttf2woff2())
-    .pipe(dest('dest/fonts'));
+    .pipe(dest('dist/fonts'));
 
   src('app/fonts/**/*.ttf')
     .pipe(changed('dist/fonts', {
