@@ -1,0 +1,52 @@
+@import "base/*.scss";
+@import "global/*.scss";
+@import "../components/**/*.scss";
+@import "**/_*.scss";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --main-grey: #4e4e4e;
+  --green: #55726D;
+  --soft-grey-bg: #FAF9F8;
+
+
+  --unit-16: 16px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+.body--inner {
+  height: 100%;
+}
+
+.header--inner,
+.main--inner,
+.footer--inner {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.header, 
+.footer {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.main {
+  flex: 1 0 auto;
+  width: 100%;
+}
+
+nav li, nav li a {
+  list-style-type: none;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+

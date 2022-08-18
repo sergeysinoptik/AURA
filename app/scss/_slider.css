@@ -1,0 +1,134 @@
+.slick-prev, .slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 32px;
+  height: 100%;
+  padding: 0;
+  transform: translate(0, -50%);
+  color: transparent;
+  border: none;
+  outline: 0;
+  z-index: 9;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.slick-prev {
+  left: 4px;
+}
+
+.slick-prev:after {
+  content: "";
+  position: relative;
+  transform: translate(0, -50%);
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  z-index: 9;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+}
+
+.slick-prev:before {
+  content: "";
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  z-index: 10;
+  background: url(/img/arrow.svg) center center no-repeat;
+  transform: rotate(-180deg) translate(0, -50%);
+}
+
+.slick-next {
+  right: 4px;
+}
+
+.slick-next:after {
+  content: "";
+  position: relative;
+  transform: translate(0, -50%);
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  z-index: 9;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+}
+
+.slick-next:before {
+  content: "";
+  position: relative;
+  display: inline-block;
+  transform: translate(0, 50%);
+  width: 32px;
+  height: 32px;
+  z-index: 10;
+  background: url(/img/arrow.svg) center center no-repeat;
+}
+
+.main--slider {
+  height: 912px;
+}
+.main--slider .slick-arrow {
+  display: none !important;
+}
+
+.main--slider-item {
+  background: url(/img/slide.webp);
+  height: 912px;
+}
+.main--slider-item a.slide-text {
+  height: 100%;
+}
+.main--slider-item a.slide-text h1 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 128px;
+  line-height: 100%;
+  text-align: center;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.slick-dots {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  top: -100px;
+  position: relative;
+  display: flex;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+  cursor: pointer;
+}
+.slick-dots li button {
+  display: none;
+}
+.slick-dots li:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: #d9d9d9;
+  opacity: 0.7;
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+}
+.slick-dots li.slick-active:before {
+  background: #EAEAEA;
+  opacity: 1;
+}
+
+.collection--card__slider .slick-dots {
+  display: none !important;
+}
