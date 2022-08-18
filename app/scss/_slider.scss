@@ -43,7 +43,7 @@
   width: 32px;
   height: 32px;
   z-index: 10;
-  background: url(/img/arrow.svg) center center no-repeat;
+  background: url(../img/arrow.svg) center center no-repeat;
   transform: rotate(-180deg) translate(0,-50%);
 }
 
@@ -72,7 +72,7 @@
   width: 32px;
   height: 32px;
   z-index: 10;
-  background: url(/img/arrow.svg) center center no-repeat;
+  background: url(../img/arrow.svg) center center no-repeat;
 }
 
 .main--slider {
@@ -84,7 +84,7 @@
 }
 
 .main--slider-item {
-  background: url(/img/slide.webp);
+  background: url(../img/slide.webp);
   height: 912px;
   a.slide-text {
     height: 100%;

@@ -17,14 +17,14 @@
   right: -100%;
   transform: translate(-100%, 100%);
   z-index: 11;
-  background: url(/img/icon-favourite-card.svg) center center no-repeat;
+  background: url(../img/icon-favourite-card.svg) center center no-repeat;
   cursor: pointer;
 }
 
 .collection--card.favourite::before, 
 .collection--card:hover::before {
   content: "";
-  background: url(/img/icon-favourite-card-white.svg) center center no-repeat;
+  background: url(../img/icon-favourite-card-white.svg) center center no-repeat;
 }
 
 .collection--card__slider {
