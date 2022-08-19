@@ -97,7 +97,7 @@ gulp.task('devJs', () => src([
   'app/js/01_main.js',
 ])
   .pipe(map.init())
-  .pipe(uglify())
+  //.pipe(uglify())
   .pipe(concat('main.min.js'))
   .pipe(map.write('../sourcemaps'))
   .pipe(dest('docs/js/'))
@@ -119,7 +119,7 @@ gulp.task('buildJs', () => src([
   'app/components/**/*.js',
   'app/js/01_main.js',
 ])
-  .pipe(uglify())
+  //.pipe(uglify())
   .pipe(babel({
     presets: ['@babel/env'],
   }))
