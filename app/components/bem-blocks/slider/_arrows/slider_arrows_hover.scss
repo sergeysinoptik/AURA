@@ -1,0 +1,12 @@
+.slider_arrows_hover {
+  .slick-arrow {
+    visibility: hidden;
+  }
+
+  &:hover {
+    .slick-arrow {
+      visibility: visible;
+      transition: all 0.2s;
+    }
+  }
+}

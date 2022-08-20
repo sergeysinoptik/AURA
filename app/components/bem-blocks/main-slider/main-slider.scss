@@ -1,0 +1,21 @@
+.main-slider {
+  height: 912px;
+  .slider-item {
+    background: url(../img/slide.webp);
+    height: 912px;
+    a.item__text {
+      height: 100%;
+      h1 {
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 128px;
+        line-height: 100%;
+        text-align: center;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+      }
+    }
+  }
+}

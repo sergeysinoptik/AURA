@@ -1,0 +1,33 @@
+.promo {
+  padding: calc(var(--unit-16) * 3.5) calc(var(--unit-16) * 5.5);
+  background: var(--soft-grey-bg);
+  &__inner {
+    background: url(../img/promo.webp);
+    height: 624px;
+    row-gap: calc(var(--unit-16) * 2);
+    padding-bottom: 113px;
+  }
+  &__content {
+    width: calc(100% - 410px);
+    margin: 0 auto;
+    padding: 37px 0 43px;
+    background: #fff;
+    row-gap: var(--unit-16);
+  }
+  &__title,
+  &__subtitle {
+    font-family: "Noto Sans";
+    font-style: normal;
+    line-height: 140%;
+    text-align: center;
+    color: var(--main-grey);
+  }
+  &__title {
+    font-weight: 300;
+    font-size: 32px;
+  }
+  &__subtitle {
+    font-weight: 400;
+    font-size: 16px;
+  }
+}

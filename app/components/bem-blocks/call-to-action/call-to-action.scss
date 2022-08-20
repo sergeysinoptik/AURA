@@ -1,0 +1,18 @@
+.call-to-action {
+  background: var(--soft-grey-bg);
+  &__wrapper {
+    padding: 104px 88px 113px;
+    row-gap: calc(var(--unit-16) * 3);
+  }
+  &__title {
+    p {
+      font-family: "Noto Sans";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 140%;
+      color: var(--black);
+      padding-right: calc(366px - 88px);
+    }
+  }
+}

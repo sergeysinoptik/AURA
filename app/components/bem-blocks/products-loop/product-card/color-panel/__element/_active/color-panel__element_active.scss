@@ -1,0 +1,15 @@
+.color-panel__element_active::after {
+  content: "";
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  top: -4px;
+  left: -4px;
+  bottom: -2px;
+  right: -2px;
+  border: 1px solid var(--main-grey);
+  display: block;
+  border-radius: 50%;
+}

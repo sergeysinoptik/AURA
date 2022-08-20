@@ -1,0 +1,7 @@
+.btn_color_white button {
+  background: #FFFFFF;
+  color: var(--main-grey);
+  &:hover {
+    background: var(--soft-grey-bg);
+  }
+}

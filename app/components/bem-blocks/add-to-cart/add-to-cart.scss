@@ -1,0 +1,22 @@
+.add-to-cart {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s ease;
+  button {
+    background: #ffffff;
+    width: 100%;
+    height: 56px;
+    font-size: 12px;
+    line-height: 140%;
+    color: var(--main-grey);
+    transition: all 0.5s ease;
+  }
+  &:hover button {
+    background: var(--green);
+    color: var(--white);
+    transition: all 0.5s ease;
+  }
+}

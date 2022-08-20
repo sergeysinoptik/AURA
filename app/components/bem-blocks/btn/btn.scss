@@ -1,0 +1,11 @@
+.btn button {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  border: 0;
+  cursor: pointer;
+  &:hover {
+    transition: all .5s;
+  }
+}

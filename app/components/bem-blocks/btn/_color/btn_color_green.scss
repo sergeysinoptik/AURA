@@ -1,0 +1,7 @@
+.btn_color_green button {
+  background: var(--green);
+  color: var(--white);
+  &:hover {
+    background: var(--main-grey);
+  }
+}

@@ -1,0 +1,30 @@
+.product-card {
+  &__images {
+    position: relative;
+  }
+  &__images:hover {
+    .add-to-cart {
+      opacity: 1;
+      transition: all 0.5s ease;
+    }
+  }
+  &__texts {
+    padding: 16px 0;
+    row-gap: 6px;
+  }
+  &__title,
+  &__price {
+    font-family: "Noto Sans";
+    font-style: normal;
+    line-height: 140%;
+    color: var(--main-grey);
+  }
+  &__title {
+    font-weight: 300;
+    font-size: 16px;
+  }
+  &__price {
+    font-weight: 400;
+    font-size: 12px;
+  }
+}
