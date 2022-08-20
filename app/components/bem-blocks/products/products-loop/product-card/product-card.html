@@ -1,13 +1,12 @@
 <div class="product-card">
-  <div class="product-card__images">
-    @@include('product-card-slider/product-card-slider.html')
-    @@include('../../add-to-cart/add-to-cart.html')
-  </div>
+  @@include('bem-blocks/products/products-loop/product-card/__images/product-card__images.html', {
+    "mod": "@@imagesize",
+  })
   <div class="product-card__description flex --j-space-between">
     <div class="product-card__texts flex --dir-column">
       <div class="product-card__title">Название товара</div>
       <div class="product-card__price">2000 руб</div>
     </div>
-    @@include('./color-panel/color-panel.html')
+    @@include('bem-blocks/products/products-loop/product-card/color-panel/color-panel.html')
   </div>
 </div>

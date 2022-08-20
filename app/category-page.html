@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-@@include('components/page-blocks/head/head.html',{
+@@include('page-blocks/head/head.html',{
   "lang":"ru",
   "title":"Aura Home",
   "description":"Aura Home internet shop",
@@ -8,15 +8,13 @@
   })
 <body>
   <div class="body--inner flex --dir-column">
-    @@include('components/page-blocks/header/header.html')
+    @@include('page-blocks/header/header.html')
     <main class="main">      
       <div class="products">
           <div class="category-top">
-            <div class="breadcrumps">
-              <p>Aurahome/спальня/постельное белье</p>
-            </div>
+            @@include('bem-blocks/breadcrumps/breadcrumps.html')
             <div class="category-top-filters">
-              <div class="category-top-filters--inner">
+              <div class="inner category-top-filters__inner">
                 <div class="filters--inner flex --j-space-between">
                   <div class="sorting flex">
                     <div>
@@ -70,11 +68,11 @@
               
             </div>
           </div>
-          @@include('components/bem-blocks/products-loop/products-loop.html')
+          @@include('bem-blocks/products/products-loop/products-loop.html')
       </div>
     </main>
-    @@include('components/page-blocks/footer/footer.html')
-    @@include('components/page-blocks/footer/scripts.html')
+    @@include('page-blocks/footer/footer.html')
+    @@include('page-blocks/footer/scripts.html')
   </div>
 </body>
 </html>

@@ -129,13 +129,17 @@ gulp.task('buildJs', () => src([
 
 // Обработка HTML
 gulp.task('html', () => src(['app/**/*.html', '!app/components/**/*.html']) // собираем файлы для отслеживания
-  .pipe(include())
+  .pipe(include({
+    basepath: 'app/components/',
+  }))
   .pipe(dest('docs'))
   .pipe(browserSync.reload({ stream: true }))); // обновляем браузер
 
 // Обработка PHP
 gulp.task('php', () => src('app/**/*.php')
-  .pipe(include())
+  .pipe(include({
+    basepath: 'app/components/',
+  }))
   .pipe(dest('docs'))
   .pipe(browserSync.reload({ stream: true }))); // обновляем браузер
 
