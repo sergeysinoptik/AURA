@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+				content="width=device-width, initial-scale=1.0">
+	<meta name="description"
+				content="Aura Home internet shop">
+	<meta name="keywords"
+				content="">
+	<link rel="shortcut icon"
+				href="img/favicons/favicon.svg"
+				type="image/svg+xml">
+	<link rel="shortcut icon"
+				href="img/favicons/favicon.webp"
+				type="image/webp">
+	<link rel="shortcut icon"
+				href="img/favicons/favicon.png"
+				type="image/x-icon">
+	<link rel="stylesheet"
+				href="css/libs.min.css">
+	<link rel="stylesheet"
+				href="css/style.min.css">
+	<title>Aura Home</title>
+</head>
+<body>
+  <div class="body--inner flex --dir-column">
+    <header class="header">
+  <div class="inner flex --j-space-between">
+    <div class="logo">
+      <a href="/"><img src="./img/header_logo.svg" alt="Aura Home Logo"></a>
+    </div>
+    <div class="menu flex --dir-column --a-center">
+      <div class="search flex --j-center">
+        <div class="icon icon-search"><img src="./img/icons-search.svg" alt="search"></div>
+        <div class="search-form">
+          <form action="">
+            <input type="text" placeholder="Поиск">
+          </form>
+        </div>
+      </div>
+      <div class="main-menu">
+        <nav class="nav">
+          <ul class="flex --j-space-between">
+            <li class="main-menu_item"><a href="#">Спальня</a></li>
+            <li class="main-menu_item"><a href="#">Гостинная</a></li>
+            <li class="main-menu_item"><a href="#">Кухня</a></li>
+            <li class="main-menu_item"><a href="#">Столовая</a></li>
+            <li class="main-menu_item"><a href="#">Ванная</a></li>
+            <li class="main-menu_item"><a href="#">Одежда и обувь</a></li>
+            <li class="main-menu_item"><a href="#">Ароматы для дома</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="icons flex">
+      <div class="icon icon-search hidden" id="scroll-search"><img src="./img/icons-search.svg" alt="search"></div>
+      <div class="icon icon-contacts"><img src="./img/icon-contacts.svg" alt="search"></div>
+      <div class="icon icon-favs"><img src="./img/icon-favourite-topbar.svg" alt="search"></div>
+      <div class="icon icon-user"><img src="./img/icon-account.svg" alt="search"></div>
+      <div class="icon icon-cart"><img src="./img/icon-shopping-bag.svg" alt="search"></div>
+    </div>
+  </div>
+</header>
+    <main class="main">      
+      <div class="products">
+          <div class="category-top">
+            <div class="breadcrumps">
+  <p><a href="#">Aurahome</a>/<a href="#">спальня</a>/<a href="">постельное белье</a></p>
+</div>
+            <div class="category-top-filters">
+              <div class="inner category-top-filters__inner">
+                <div class="filters--inner flex --j-space-between">
+                  <div class="sorting flex">
+                    <div>
+                      <div class="dropdown" id="sorting-first">
+                        <span>Сортировать</span>
+                      </div>
+                      <ul class="dropdown-ul">
+                        <li><a href="#">Рекомендованные</a></li>
+                        <li><a href="#">Новинки</a></li>
+                        <li><a href="#">Сначала дешевле</a></li>
+                        <li><a href="#">Сначала дороже</a></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <div class="dropdown" id="sorting-second">
+                        <span>Размер</span>
+                      </div>
+                      <ul class="dropdown-ul">
+                        <li><a href="#">L</a></li>
+                        <li><a href="#">XL</a></li>
+                        <li><a href="#">XXL</a></li>
+                        <li><a href="#">M</a></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <div class="dropdown" id="sorting-third">
+                        <span>Цвет</span>
+                      </div>
+                      <ul class="dropdown-ul">
+                        <li><a href="#">Красный</a></li>
+                        <li><a href="#">Белый</a></li>
+                        <li><a href="#">Желтый</a></li>
+                        <li><a href="#">Синий</a></li>
+                      </ul>
+                    </div>
+                  
+                  </div>
+                  <div class="viewing flex">
+                    <p class="quantity">120 товаров</p>
+                    <div class="grid-toggle flex">
+                      <form action="" class="toggle-form">
+                        <input type="radio" name="toggle" id="grid-3col" value="grid-3col" hidden>
+                        <input type="radio" name="toggle" id="grid-4col" value="grid-4col" hidden>
+                      </form>
+                      <label for="grid-3col" class="grid-3col" onclick></label>
+                      <label for="grid-4col" class="grid-4col" onclick></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="products-loop">
+  <div class="loop-grid">
+  
+    <div class="product-card">
+  <div class="product-card__images product-card__images_size_medium">
+  <div class="slider-product-card slider_dots_disabled slider_arrows_hover slider_favourites_enabled">
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+</div>
+  <div class="add-to-cart">
+  <div class="btn ">
+  <button>Добавить в корзину</button>
+</div>
+</div>
+</div>
+  <div class="product-card__description flex --j-space-between">
+    <div class="product-card__texts flex --dir-column">
+      <div class="product-card__title">Название товара</div>
+      <div class="product-card__price">2000 руб</div>
+    </div>
+    <div class="color-panel">
+  <ul class="flex">
+    <li class="color-panel__element color-panel__element_color_676767"></li>
+    <li class="color-panel__element color-panel__element_color_948080"></li>
+  </ul>
+</div>
+  </div>
+</div>
+
+  
+    <div class="product-card">
+  <div class="product-card__images product-card__images_size_medium">
+  <div class="slider-product-card slider_dots_disabled slider_arrows_hover slider_favourites_enabled">
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+</div>
+  <div class="add-to-cart">
+  <div class="btn ">
+  <button>Добавить в корзину</button>
+</div>
+</div>
+</div>
+  <div class="product-card__description flex --j-space-between">
+    <div class="product-card__texts flex --dir-column">
+      <div class="product-card__title">Название товара</div>
+      <div class="product-card__price">2000 руб</div>
+    </div>
+    <div class="color-panel">
+  <ul class="flex">
+    <li class="color-panel__element color-panel__element_color_676767"></li>
+    <li class="color-panel__element color-panel__element_color_948080"></li>
+  </ul>
+</div>
+  </div>
+</div>
+
+  
+    <div class="product-card">
+  <div class="product-card__images product-card__images_size_medium">
+  <div class="slider-product-card slider_dots_disabled slider_arrows_hover slider_favourites_enabled">
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+</div>
+  <div class="add-to-cart">
+  <div class="btn ">
+  <button>Добавить в корзину</button>
+</div>
+</div>
+</div>
+  <div class="product-card__description flex --j-space-between">
+    <div class="product-card__texts flex --dir-column">
+      <div class="product-card__title">Название товара</div>
+      <div class="product-card__price">2000 руб</div>
+    </div>
+    <div class="color-panel">
+  <ul class="flex">
+    <li class="color-panel__element color-panel__element_color_676767"></li>
+    <li class="color-panel__element color-panel__element_color_948080"></li>
+  </ul>
+</div>
+  </div>
+</div>
+
+  
+    <div class="product-card">
+  <div class="product-card__images product-card__images_size_medium">
+  <div class="slider-product-card slider_dots_disabled slider_arrows_hover slider_favourites_enabled">
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+</div>
+  <div class="add-to-cart">
+  <div class="btn ">
+  <button>Добавить в корзину</button>
+</div>
+</div>
+</div>
+  <div class="product-card__description flex --j-space-between">
+    <div class="product-card__texts flex --dir-column">
+      <div class="product-card__title">Название товара</div>
+      <div class="product-card__price">2000 руб</div>
+    </div>
+    <div class="color-panel">
+  <ul class="flex">
+    <li class="color-panel__element color-panel__element_color_676767"></li>
+    <li class="color-panel__element color-panel__element_color_948080"></li>
+  </ul>
+</div>
+  </div>
+</div>
+
+  
+    <div class="product-card">
+  <div class="product-card__images product-card__images_size_medium">
+  <div class="slider-product-card slider_dots_disabled slider_arrows_hover slider_favourites_enabled">
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+</div>
+  <div class="add-to-cart">
+  <div class="btn ">
+  <button>Добавить в корзину</button>
+</div>
+</div>
+</div>
+  <div class="product-card__description flex --j-space-between">
+    <div class="product-card__texts flex --dir-column">
+      <div class="product-card__title">Название товара</div>
+      <div class="product-card__price">2000 руб</div>
+    </div>
+    <div class="color-panel">
+  <ul class="flex">
+    <li class="color-panel__element color-panel__element_color_676767"></li>
+    <li class="color-panel__element color-panel__element_color_948080"></li>
+  </ul>
+</div>
+  </div>
+</div>
+
+  
+    <div class="product-card">
+  <div class="product-card__images product-card__images_size_medium">
+  <div class="slider-product-card slider_dots_disabled slider_arrows_hover slider_favourites_enabled">
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+</div>
+  <div class="add-to-cart">
+  <div class="btn ">
+  <button>Добавить в корзину</button>
+</div>
+</div>
+</div>
+  <div class="product-card__description flex --j-space-between">
+    <div class="product-card__texts flex --dir-column">
+      <div class="product-card__title">Название товара</div>
+      <div class="product-card__price">2000 руб</div>
+    </div>
+    <div class="color-panel">
+  <ul class="flex">
+    <li class="color-panel__element color-panel__element_color_676767"></li>
+    <li class="color-panel__element color-panel__element_color_948080"></li>
+  </ul>
+</div>
+  </div>
+</div>
+
+  
+    <div class="product-card">
+  <div class="product-card__images product-card__images_size_medium">
+  <div class="slider-product-card slider_dots_disabled slider_arrows_hover slider_favourites_enabled">
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+</div>
+  <div class="add-to-cart">
+  <div class="btn ">
+  <button>Добавить в корзину</button>
+</div>
+</div>
+</div>
+  <div class="product-card__description flex --j-space-between">
+    <div class="product-card__texts flex --dir-column">
+      <div class="product-card__title">Название товара</div>
+      <div class="product-card__price">2000 руб</div>
+    </div>
+    <div class="color-panel">
+  <ul class="flex">
+    <li class="color-panel__element color-panel__element_color_676767"></li>
+    <li class="color-panel__element color-panel__element_color_948080"></li>
+  </ul>
+</div>
+  </div>
+</div>
+
+  
+    <div class="product-card">
+  <div class="product-card__images product-card__images_size_medium">
+  <div class="slider-product-card slider_dots_disabled slider_arrows_hover slider_favourites_enabled">
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+</div>
+  <div class="add-to-cart">
+  <div class="btn ">
+  <button>Добавить в корзину</button>
+</div>
+</div>
+</div>
+  <div class="product-card__description flex --j-space-between">
+    <div class="product-card__texts flex --dir-column">
+      <div class="product-card__title">Название товара</div>
+      <div class="product-card__price">2000 руб</div>
+    </div>
+    <div class="color-panel">
+  <ul class="flex">
+    <li class="color-panel__element color-panel__element_color_676767"></li>
+    <li class="color-panel__element color-panel__element_color_948080"></li>
+  </ul>
+</div>
+  </div>
+</div>
+
+  
+    <div class="product-card">
+  <div class="product-card__images product-card__images_size_medium">
+  <div class="slider-product-card slider_dots_disabled slider_arrows_hover slider_favourites_enabled">
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+</div>
+  <div class="add-to-cart">
+  <div class="btn ">
+  <button>Добавить в корзину</button>
+</div>
+</div>
+</div>
+  <div class="product-card__description flex --j-space-between">
+    <div class="product-card__texts flex --dir-column">
+      <div class="product-card__title">Название товара</div>
+      <div class="product-card__price">2000 руб</div>
+    </div>
+    <div class="color-panel">
+  <ul class="flex">
+    <li class="color-panel__element color-panel__element_color_676767"></li>
+    <li class="color-panel__element color-panel__element_color_948080"></li>
+  </ul>
+</div>
+  </div>
+</div>
+
+  
+    <div class="product-card">
+  <div class="product-card__images product-card__images_size_medium">
+  <div class="slider-product-card slider_dots_disabled slider_arrows_hover slider_favourites_enabled">
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+</div>
+  <div class="add-to-cart">
+  <div class="btn ">
+  <button>Добавить в корзину</button>
+</div>
+</div>
+</div>
+  <div class="product-card__description flex --j-space-between">
+    <div class="product-card__texts flex --dir-column">
+      <div class="product-card__title">Название товара</div>
+      <div class="product-card__price">2000 руб</div>
+    </div>
+    <div class="color-panel">
+  <ul class="flex">
+    <li class="color-panel__element color-panel__element_color_676767"></li>
+    <li class="color-panel__element color-panel__element_color_948080"></li>
+  </ul>
+</div>
+  </div>
+</div>
+
+  
+    <div class="product-card">
+  <div class="product-card__images product-card__images_size_medium">
+  <div class="slider-product-card slider_dots_disabled slider_arrows_hover slider_favourites_enabled">
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+</div>
+  <div class="add-to-cart">
+  <div class="btn ">
+  <button>Добавить в корзину</button>
+</div>
+</div>
+</div>
+  <div class="product-card__description flex --j-space-between">
+    <div class="product-card__texts flex --dir-column">
+      <div class="product-card__title">Название товара</div>
+      <div class="product-card__price">2000 руб</div>
+    </div>
+    <div class="color-panel">
+  <ul class="flex">
+    <li class="color-panel__element color-panel__element_color_676767"></li>
+    <li class="color-panel__element color-panel__element_color_948080"></li>
+  </ul>
+</div>
+  </div>
+</div>
+
+  
+    <div class="product-card">
+  <div class="product-card__images product-card__images_size_medium">
+  <div class="slider-product-card slider_dots_disabled slider_arrows_hover slider_favourites_enabled">
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+  <div class="slider-item">
+    <img class="product-image" src="./img/product.webp" alt="" />
+  </div>
+</div>
+  <div class="add-to-cart">
+  <div class="btn ">
+  <button>Добавить в корзину</button>
+</div>
+</div>
+</div>
+  <div class="product-card__description flex --j-space-between">
+    <div class="product-card__texts flex --dir-column">
+      <div class="product-card__title">Название товара</div>
+      <div class="product-card__price">2000 руб</div>
+    </div>
+    <div class="color-panel">
+  <ul class="flex">
+    <li class="color-panel__element color-panel__element_color_676767"></li>
+    <li class="color-panel__element color-panel__element_color_948080"></li>
+  </ul>
+</div>
+  </div>
+</div>
+
+  
+</div>
+</div>
+      </div>
+    </main>
+    <footer class="footer flex --dir-column">
+  <div class="inner">
+    <div class="footer-main flex --j-space-between">
+      <nav class="nav">
+        <ul class="nav__level-1 flex">
+          <li>
+            <a href="#">Магазин</a>
+            <ul class="nav__level-2">
+              <li><a href="#">Категории товаров</a></li>
+              <li><a href="#">Весь ассортимент</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">О нас</a>
+            <ul class="nav__level-2">
+              <li><a href="#">О компании</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Покупателям</a>
+            <ul class="nav__level-2">
+              <li><a href="#">Покупка и возврат</a></li>
+              <li><a href="#">Гарантия качества</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Контакты</a>
+            <ul class="nav__level-2">
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="logo">
+        <a href="/">
+          <img src="./img/footer_logo.svg" alt="Aura Home">
+        </a>
+      </div>
+    </div>
+    <div class="subfooter">
+      <nav class="nav">
+        <ul class="flex">
+          <li><a href="#">Политика конфиденциальности</a></li>
+          <li><a href="#">Политика использования файлов cookies</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</footer>
+    <script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
+  </div>
+</body>
+</html>

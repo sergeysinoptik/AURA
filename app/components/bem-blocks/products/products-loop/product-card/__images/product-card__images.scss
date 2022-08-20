@@ -1,6 +1,6 @@
 .product-card__images {
   position: relative;
-  :hover {
+  &:hover {
     .add-to-cart {
       opacity: 1;
       transition: all 0.5s ease;
