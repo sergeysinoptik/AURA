@@ -35,6 +35,7 @@
   }
   .icons {
     column-gap: var(--unit-16);
+    position: relative;
     .icon {
       cursor: pointer;
     }

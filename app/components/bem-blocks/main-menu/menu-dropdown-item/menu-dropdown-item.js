@@ -14,7 +14,6 @@ function mainMenuDropdown() {
 
     document.addEventListener('click', (e) => {
       const { target } = e;
-      // const dropdown = item.querySelector('.menu-dropdown-item');
       const itsDropdown = target === item || item.contains(target);
       const isActive = dropdown.classList.contains('menu-dropdown-item_active');
 

@@ -1,0 +1,41 @@
+.contacts-dropdown {
+  position: absolute;
+  z-index: 30;
+  background: #FFFFFF;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+  padding: 24px;
+  left: -122px;
+  top: 44px;
+  opacity: 0;
+  transition: opacity 1s;
+  visibility: hidden;
+  &__content {
+    row-gap: 24px;
+    padding: 17px 10px 0;
+  }
+  &::before {
+    content: ''; 
+    position: absolute;
+    right: 120px;
+    top: -30px;
+    border: 10px solid transparent;
+    border-bottom: 20px solid #fff;
+  }
+  p {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    color: var(--main-grey);
+  }
+  &_active {
+    opacity: 1;
+    transition: opacity .5s;
+    visibility: visible;
+  }
+}
+
+.header.sticky .contacts-dropdown {
+  left: -80px !important;
+}
