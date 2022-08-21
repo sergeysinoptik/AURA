@@ -1,0 +1,13 @@
+.fixed-chat {
+  position: fixed;
+  bottom: 32px;
+  right: 52px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 7px 1px rgba(29, 16, 5, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  a {
+    display: block;
+    margin: 20px;
+  }
+}

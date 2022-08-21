@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   height: 40px;
-  :before {
+  &:before {
     content: "";
     display: inline-block;
     border-radius: 50%;
