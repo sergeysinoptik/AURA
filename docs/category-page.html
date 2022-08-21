@@ -67,66 +67,56 @@
 </header>
     <main class="main">      
       <div class="products">
-          <div class="category-top">
-            <div class="breadcrumps">
+  <div class="products-topbar">
+  <div class="breadcrumps">
   <p><a href="#">Aurahome</a>/<a href="#">спальня</a>/<a href="">постельное белье</a></p>
 </div>
-            <div class="category-top-filters">
-              <div class="inner category-top-filters__inner">
-                <div class="filters--inner flex --j-space-between">
-                  <div class="sorting flex">
-                    <div>
-                      <div class="dropdown" id="sorting-first">
-                        <span>Сортировать</span>
-                      </div>
-                      <ul class="dropdown-ul">
-                        <li><a href="#">Рекомендованные</a></li>
-                        <li><a href="#">Новинки</a></li>
-                        <li><a href="#">Сначала дешевле</a></li>
-                        <li><a href="#">Сначала дороже</a></li>
-                      </ul>
-                    </div>
-                    <div>
-                      <div class="dropdown" id="sorting-second">
-                        <span>Размер</span>
-                      </div>
-                      <ul class="dropdown-ul">
-                        <li><a href="#">L</a></li>
-                        <li><a href="#">XL</a></li>
-                        <li><a href="#">XXL</a></li>
-                        <li><a href="#">M</a></li>
-                      </ul>
-                    </div>
-                    <div>
-                      <div class="dropdown" id="sorting-third">
-                        <span>Цвет</span>
-                      </div>
-                      <ul class="dropdown-ul">
-                        <li><a href="#">Красный</a></li>
-                        <li><a href="#">Белый</a></li>
-                        <li><a href="#">Желтый</a></li>
-                        <li><a href="#">Синий</a></li>
-                      </ul>
-                    </div>
-                  
-                  </div>
-                  <div class="viewing flex">
-                    <p class="quantity">120 товаров</p>
-                    <div class="grid-toggle flex">
-                      <form action="" class="toggle-form">
-                        <input type="radio" name="toggle" id="grid-3col" value="grid-3col" hidden>
-                        <input type="radio" name="toggle" id="grid-4col" value="grid-4col" hidden>
-                      </form>
-                      <label for="grid-3col" class="grid-3col" onclick></label>
-                      <label for="grid-4col" class="grid-4col" onclick></label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-            </div>
-          </div>
-          <div class="products-loop">
+  
+  <div class="products-filter">
+  <div class="inner products-filter__inner flex --j-space-between">
+      <div class="product-filter__sorting flex">
+  <div class="dropdown-filter">
+  <div class="dropdown" id="dropdown-first">
+    <span>Сортировать</span>
+  </div>
+  <ul class="dropdown-ul">
+    <li class="dropdown-filter__dropdown"><a href="#">Рекомендованные</a></li><li class="dropdown-filter__dropdown"><a href="#">Новинки</a></li><li class="dropdown-filter__dropdown"><a href="#">Сначала дешевле</a></li><li class="dropdown-filter__dropdown"><a href="#">Сначала дороже</a></li>
+  </ul>
+</div>
+  <div class="dropdown-filter">
+  <div class="dropdown" id="dropdown-second">
+    <span>Размер</span>
+  </div>
+  <ul class="dropdown-ul">
+    <li class="dropdown-filter__dropdown"><a href="#">L</a></li><li class="dropdown-filter__dropdown"><a href="#">XL</a></li><li class="dropdown-filter__dropdown"><a href="#">XXL</a></li><li class="dropdown-filter__dropdown"><a href="#">S</a></li><li class="dropdown-filter__dropdown"><a href="#">XS</a></li><li class="dropdown-filter__dropdown"><a href="#">XXS</a></li><li class="dropdown-filter__dropdown"><a href="#">M</a></li>
+  </ul>
+</div>
+  <div class="dropdown-filter">
+  <div class="dropdown" id="dropdown-third">
+    <span>Цвет</span>
+  </div>
+  <ul class="dropdown-ul">
+    <li class="dropdown-filter__dropdown"><a href="#">Красный</a></li><li class="dropdown-filter__dropdown"><a href="#">Белый</a></li><li class="dropdown-filter__dropdown"><a href="#">Желтый</a></li><li class="dropdown-filter__dropdown"><a href="#">Синий</a></li><li class="dropdown-filter__dropdown"><a href="#">Зеленый</a></li><li class="dropdown-filter__dropdown"><a href="#">Фиолетовый</a></li><li class="dropdown-filter__dropdown"><a href="#">Черный</a></li>
+  </ul>
+</div>
+</div>
+      <div class="product-filter__view-toggle flex">
+  <p class="quantity">120 товаров</p>
+  <div class="grid-toggle flex">
+    <form action="" class="toggle-form">
+      <input type="radio" name="toggle" id="grid-3col" value="grid-3col" hidden>
+      <input type="radio" name="toggle" id="grid-4col" value="grid-4col" hidden>
+    </form>
+    <label for="grid-3col" class="grid-3col" onclick></label>
+    <label for="grid-4col" class="grid-4col" onclick></label>
+  </div>
+</div>
+
+  </div>
+  
+</div>
+</div>
+  <div class="products-loop">
   <div class="loop-grid">
   
     <div class="product-card">
@@ -539,7 +529,7 @@
   
 </div>
 </div>
-      </div>
+</div>
     </main>
     <footer class="footer flex --dir-column">
   <div class="inner">

@@ -1,0 +1,14 @@
+.products-filter_sticky {
+  position: fixed;
+  width: 100%;
+  top: 100px;
+  z-index: 9999;
+  transition: all 0.5s;
+  background: #ffffff;
+  z-index: 9999;
+  transition: all 0.5s;
+  .products-filter__inner {
+    padding-top: 17px;
+    padding-bottom: 17px;
+  }
+}

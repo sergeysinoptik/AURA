@@ -1,0 +1,26 @@
+.ifclothe {
+  padding: 40px 199px 0;
+  width: 1440px;
+  margin: 0 auto;
+  &__item {
+    a {
+      row-gap: var(--unit-16);
+    }
+    p {
+      font-family: "Noto Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 140%;
+      text-transform: uppercase;
+      color: var(--main-grey);
+    }
+  }
+  &__item:hover,
+  &__item_current {
+    p {
+      text-decoration-line: underline;
+    }
+  }
+  
+}

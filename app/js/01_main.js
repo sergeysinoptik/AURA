@@ -1,5 +1,23 @@
 /* eslint-disable prefer-arrow-callback */
 /* eslint-disable no-undef */
+
+function select(item) {
+  return document.querySelector(item);
+}
+
+function reloadSlick() {
+  $('.slider-product-card').slick('unslick');
+  $('.slider-product-card').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    speed: 300,
+    autoplaySpeed: 2000,
+  });
+}
+
+
 $(document).ready(function () {
   $('.slider-product-card').slick({
     infinite: true,
@@ -47,90 +65,27 @@ $carousel.on('afterChange', function () {
 
 
 
-function select(item) {
-  return document.querySelector(item);
-}
 
-const toggle3col = select('#grid-3col');
-const toggle4col = select('#grid-4col');
+
+
 
 const productsLoop = select('.products-loop');
 
-function reloadSlick() {
-  $('.slider-product-card').slick('unslick');
-  $('.slider-product-card').slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: true,
-    speed: 300,
-    autoplaySpeed: 2000,
-  });
-}
-
-function toggleProductLoop() {
-  const loopGrid = document.querySelector('.loop-grid');
-  
-  const productCards = productsLoop.querySelectorAll('.product-card');
-
-  for (let item of productCards) {
-    const productCardImages = item.querySelector('.product-card__images');
-    if (toggle3col.checked) {
-      loopGrid.classList.remove('loop-grid_columns_4');
-      loopGrid.classList.add('loop-grid_columns_3');
-      productCardImages.classList.remove('product-card__images_size_medium');
-      productCardImages.classList.add('product-card__images_size_large');
-      reloadSlick();
-    }
-    if (toggle4col.checked) {
-      loopGrid.classList.remove('loop-grid_columns_3');
-      loopGrid.classList.add('loop-grid_columns_4');
-      productCardImages.classList.remove('product-card__images_size_large');
-      productCardImages.classList.add('product-card__images_size_medium');
-      reloadSlick();
-    }
-  }
-}
 
 
 
 
 
-window.addEventListener('scroll', function(event) {
-  const body = document.querySelector('body');
-  const filters = document.querySelector('.category-top-filters');
-  console.log(scrollY, body.scrollTop, event.target);
-  if (body.scrollTop > 85) {
-    filters.classList.add('sticky');
-  } else {
-    filters.classList.remove('sticky');
-  }
-}, true);
 
-function dropdownLogic() {
-  const dropdownsList = document.querySelectorAll('.dropdown');
-  for (let item of dropdownsList) {
-    item.addEventListener('click', function(e) {
-      item.classList.toggle('active');
-    })
-    document.addEventListener('click', function(e) {
-      let target = e.target;
-      let itsDropdown = target === item || item.contains(target);
-      let isActive = item.classList.contains('active');
 
-      if (!itsDropdown && isActive) {
-        item.classList.toggle('active');
-      }
-    })
-  }
-}
+
+
+
+
 
 function windowOnLoad() {
-  toggle3col.addEventListener('click', toggleProductLoop);
-  toggle4col.addEventListener('click', toggleProductLoop);
   //scrollingHeader();
   //window.addEventListener("scroll", myFunction);
-  dropdownLogic();
 }
 
 window.onload = windowOnLoad();

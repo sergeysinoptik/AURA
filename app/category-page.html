@@ -10,66 +10,12 @@
   <div class="body--inner flex --dir-column">
     @@include('page-blocks/header/header.html')
     <main class="main">      
-      <div class="products">
-          <div class="category-top">
-            @@include('bem-blocks/breadcrumps/breadcrumps.html')
-            <div class="category-top-filters">
-              <div class="inner category-top-filters__inner">
-                <div class="filters--inner flex --j-space-between">
-                  <div class="sorting flex">
-                    <div>
-                      <div class="dropdown" id="sorting-first">
-                        <span>Сортировать</span>
-                      </div>
-                      <ul class="dropdown-ul">
-                        <li><a href="#">Рекомендованные</a></li>
-                        <li><a href="#">Новинки</a></li>
-                        <li><a href="#">Сначала дешевле</a></li>
-                        <li><a href="#">Сначала дороже</a></li>
-                      </ul>
-                    </div>
-                    <div>
-                      <div class="dropdown" id="sorting-second">
-                        <span>Размер</span>
-                      </div>
-                      <ul class="dropdown-ul">
-                        <li><a href="#">L</a></li>
-                        <li><a href="#">XL</a></li>
-                        <li><a href="#">XXL</a></li>
-                        <li><a href="#">M</a></li>
-                      </ul>
-                    </div>
-                    <div>
-                      <div class="dropdown" id="sorting-third">
-                        <span>Цвет</span>
-                      </div>
-                      <ul class="dropdown-ul">
-                        <li><a href="#">Красный</a></li>
-                        <li><a href="#">Белый</a></li>
-                        <li><a href="#">Желтый</a></li>
-                        <li><a href="#">Синий</a></li>
-                      </ul>
-                    </div>
-                  
-                  </div>
-                  <div class="viewing flex">
-                    <p class="quantity">120 товаров</p>
-                    <div class="grid-toggle flex">
-                      <form action="" class="toggle-form">
-                        <input type="radio" name="toggle" id="grid-3col" value="grid-3col" hidden>
-                        <input type="radio" name="toggle" id="grid-4col" value="grid-4col" hidden>
-                      </form>
-                      <label for="grid-3col" class="grid-3col" onclick></label>
-                      <label for="grid-4col" class="grid-4col" onclick></label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-            </div>
-          </div>
-          @@include('bem-blocks/products/products-loop/products-loop.html')
-      </div>
+      @@include('bem-blocks/products/products.html', {
+        "ifclothe":"",
+        "item1":"Aurahome",
+        "item2":"спальня",
+        "item3":"постельное белье"
+      })
     </main>
     @@include('page-blocks/footer/footer.html')
     @@include('page-blocks/footer/scripts.html')
