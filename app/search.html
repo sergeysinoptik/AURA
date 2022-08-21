@@ -9,8 +9,14 @@
 <body>
   <div class="body--inner flex --dir-column">
     @@include('page-blocks/header/header.html')
-    <main class="main">
-      <div>aaa</div>
+    <main class="main">      
+      @@include('bem-blocks/products/products.html', {
+        "ifclothe":"",
+        "ifsearch":"@@include('bem-blocks/products/products-topbar/ifsearch/ifsearch.html')",
+        "item1":"Aurahome",
+        "item2":"поиск",
+        "item3":""
+      })
     </main>
     @@include('page-blocks/footer/footer.html')
     @@include('page-blocks/footer/scripts.html')
