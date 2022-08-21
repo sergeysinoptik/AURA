@@ -1,0 +1,32 @@
+.dropdown-category__item {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  text-align: right;
+  text-transform: uppercase;
+  color: var(--main-grey);
+  margin-right: 32px;
+  padding: 6px 0;
+  &:hover {
+    margin-right: 25px;
+    text-decoration-line: none !important;
+  }
+  &::after {
+    content: '';
+    display: none;
+    position: relative;
+    right: -32px;
+    width: 7px;
+    height: 6px;
+    background: url('/img/polygon.svg') center center no-repeat;
+  }
+  &:hover::after {
+    display: inline-block;
+  }
+  a:hover {
+    font-weight: 500;
+    text-decoration-line: none !important;
+  }
+}

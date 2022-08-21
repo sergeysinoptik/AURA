@@ -1,0 +1,62 @@
+<div class="main-menu">
+  <nav class="nav">
+    <ul class="flex --j-space-between">
+      <li class="main-menu_item">
+        <a href="#">Спальня</a>
+        @@include('bem-blocks/main-menu/menu-dropdown-item/menu-dropdown-item.html', {
+          "category":"bedroom",
+          "image":"./img/menu-dropdown-img.webp",
+          "path":"data/dropdown-menus/1.json"
+        })
+      </li>
+      <li class="main-menu_item">
+        <a href="#">Гостинная</a>
+        @@include('bem-blocks/main-menu/menu-dropdown-item/menu-dropdown-item.html', {
+          "category":"livingroom",
+          "image":"./img/menu-dropdown-img.webp",
+          "path":"data/dropdown-menus/2.json"
+        })
+      </li>
+      <li class="main-menu_item">
+        <a href="#">Кухня</a>
+        @@include('bem-blocks/main-menu/menu-dropdown-item/menu-dropdown-item.html', {
+          "category":"kitchen",
+          "image":"./img/menu-dropdown-img.webp",
+          "path":"data/dropdown-menus/3.json"
+        })
+      </li>
+      <li class="main-menu_item">
+        <a href="#">Столовая</a>
+        @@include('bem-blocks/main-menu/menu-dropdown-item/menu-dropdown-item.html', {
+          "category":"diningroom",
+          "image":"./img/menu-dropdown-img.webp",
+          "path":"data/dropdown-menus/4.json"
+        })
+      </li>
+      <li class="main-menu_item">
+        <a href="#">Ванная</a>
+        @@include('bem-blocks/main-menu/menu-dropdown-item/menu-dropdown-item.html', {
+          "category":"bedroom",
+          "image":"./img/menu-dropdown-img.webp",
+          "path":"data/dropdown-menus/5.json"
+        })
+      </li>
+      <li class="main-menu_item">
+        <a href="#">Одежда и обувь</a>
+        @@include('bem-blocks/main-menu/menu-dropdown-item/menu-dropdown-item.html', {
+          "category":"clothing",
+          "image":"./img/menu-dropdown-img.webp",
+          "path":"data/dropdown-menus/6.json"
+        })
+      </li>
+      <li class="main-menu_item">
+        <a href="#">Ароматы для дома</a>
+        @@include('bem-blocks/main-menu/menu-dropdown-item/menu-dropdown-item.html', {
+          "category":"fragrances",
+          "image":"./img/menu-dropdown-img.webp",
+          "path":"data/dropdown-menus/7.json"
+        })
+      </li>
+    </ul>
+  </nav>
+</div>

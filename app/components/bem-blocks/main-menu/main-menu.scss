@@ -1,0 +1,18 @@
+.main-menu {
+  ul {
+    column-gap: calc(var(--unit-16) * 2);
+    li,
+    li a {
+      font-family: "Noto Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 140%;
+      text-transform: uppercase;
+      color: var(--main-grey);
+      &:hover {
+        text-decoration-line: underline;
+      }
+    }
+  }
+}

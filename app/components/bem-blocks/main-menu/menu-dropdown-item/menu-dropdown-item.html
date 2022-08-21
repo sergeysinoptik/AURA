@@ -1,0 +1,22 @@
+<div class="menu-dropdown-item" id="menu-dropdown-@@category">
+  <div class="menu-dropdown-item__wrapper flex --j-space-between">
+    <div class="menu-dropdown-item__menu flex --dir-column --a-end">
+      <div class="dropdown-category">
+        <ul class="">
+          @@loop('bem-blocks/main-menu/menu-dropdown-item/dropdown-category/__item/dropdown-category__item.html', "@@path")
+        </ul>
+      </div>
+      <div class="dropdown-category">
+        <ul>
+          @@loop('bem-blocks/main-menu/menu-dropdown-item/dropdown-category/__item/dropdown-category__item.html', [
+          { "link":"#", "name":"Новые поступления" },
+          { "link":"#", "name":"Весь ассортимент" }
+          ])
+        </ul>
+      </div>
+    </div>
+    <div class="menu-dropdown-item__img">
+      <img src="@@image" alt="@@category">
+    </div>
+  </div>
+</div>

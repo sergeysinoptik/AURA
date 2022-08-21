@@ -2,6 +2,7 @@
   background: #fff;
   .inner {
     padding: 32px 40px 17px;
+    position: relative;
   }
   .menu {
     row-gap: 24px;
@@ -32,23 +33,11 @@
       }
     }
   }
-  .main-menu {
-    ul {
-      column-gap: calc(var(--unit-16) * 2);
-      li,
-      li a {
-        font-family: "Noto Sans";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 140%;
-        text-transform: uppercase;
-        color: var(--main-grey);
-      }
-    }
-  }
   .icons {
     column-gap: var(--unit-16);
+    .icon {
+      cursor: pointer;
+    }
     .hidden {
       display: none;
     }
