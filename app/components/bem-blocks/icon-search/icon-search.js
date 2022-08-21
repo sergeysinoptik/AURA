@@ -1,4 +1,4 @@
-/* global window, select */
+/* global window, document, select */
 
 const scrollSearch = select('#scroll-search');
 const search = select('#header-search');
@@ -8,6 +8,7 @@ function headerSearchToggle() {
   scrollSearch.addEventListener('click', () => {
     search.classList.toggle('search_active');
     mainMenu.classList.toggle('main-menu_hidden');
+    document.getElementById('header-search-input').focus();
   });
 
   const body = select('body');

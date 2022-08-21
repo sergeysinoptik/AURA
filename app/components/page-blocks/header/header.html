@@ -8,14 +8,19 @@
         <div class="icon icon-search"><img src="./img/icons-search.svg" alt="search"></div>
         <div class="search-form">
           <form action="">
-            <input type="text" placeholder="Поиск">
+            <input type="text" id="header-search-input" placeholder="Поиск">
           </form>
         </div>
       </div>
       @@include('bem-blocks/main-menu/main-menu.html')
     </div>
     <div class="icons flex">
-      <div class="icon icon-search hidden" id="scroll-search"><img src="./img/icons-search.svg" alt="search"></div>
+
+      <div class="icon icon-search hidden" id="scroll-search">
+        <label for="header-search-input">
+          <img src="./img/icons-search.svg" alt="search">
+        </label>
+      </div>
       <div class="icon icon-contacts" id="icon-contacts">
         <img src="./img/icon-contacts.svg" alt="contacts">
         @@include('bem-blocks/icon-contacts/icon-contacts.html')
