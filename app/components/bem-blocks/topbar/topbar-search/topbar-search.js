@@ -1,7 +1,7 @@
 /* global select, window */
 
 const iconClear = select('.icon-clear');
-const mainSearchInput = select('#main-search-input');
+const mainSearchInput = select('#topbar-search-input');
 
 function clearSearchInput() {
   if (iconClear) {
