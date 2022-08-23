@@ -1,3 +1,6 @@
-.single-product {
-  background: var(--white);
+.product {
+  &__wrapper {
+    padding: 56px 16px 92px;
+    column-gap: 19px;
+  }
 }

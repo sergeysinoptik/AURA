@@ -22,7 +22,7 @@ body {
   height: 100%;
 }
 
-.body--inner {
+/* .body--inner {
   height: 100%;
 }
 
@@ -30,7 +30,7 @@ body {
 .main--inner {
   width: 1440px;
   margin: 0 auto;
-}
+}  */
 
 .header, 
 .footer {
@@ -47,6 +47,20 @@ body {
   width: 100%;
 }
 
+.bg {
+  &_white {
+    background: var(--white);
+  }
+  &_grey {
+    background: var(--soft-grey-bg);
+  }
+}
+
+.width {
+  width: 1440px;
+  margin: 0 auto;
+}
+
 nav li, nav li a {
   list-style-type: none;
   text-decoration: none;
@@ -54,6 +68,3 @@ nav li, nav li a {
   cursor: pointer;
 }
 
-.col-4--5 {
-  max-width: 258px;
-}

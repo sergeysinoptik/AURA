@@ -1,11 +1,11 @@
-<div class="products">
-  @@include('bem-blocks/topbar/topbar.html', {
-    "ifTopbarSubcategories":"@@ifTopbarSubcategories",
-    "ifTopbarSearch":"@@ifTopbarSearch",
-    "iffilter":"@@iffilter",
-    "item1":"@@item1",
-    "item2":"@@item2",
-    "item3":"@@item3"
-  })
-  @@include('bem-blocks/products/products-loop/products-loop.html')
+<div class="products bg bg_grey">
+  <div class="products-loop width">
+    <div class="loop-grid">
+      @@for (var i = 0; i < 12; i++) {
+        @@include('bem-blocks/products/products-loop/product-card/product-card.html', {
+          "imagesize": "product-card__images_size_medium"
+        })
+      }
+    </div>
+  </div>
 </div>

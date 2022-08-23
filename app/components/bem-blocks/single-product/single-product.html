@@ -1,11 +1,8 @@
-<div class="single-product">
-  @@include('bem-blocks/topbar/topbar.html', {
-    "ifTopbarSubcategories":"@@ifTopbarSubcategories",
-    "ifTopbarSearch":"@@ifTopbarSearch",
-    "iffilter":"@@iffilter",
-    "item1":"@@item1",
-    "item2":"@@item2",
-    "item3":"@@item3"
-  })
-  @@include('bem-blocks/single-product/product/product.html')
+<div class="single-product bg bg_white">
+  <div class="width">
+    <div class="product__wrapper flex">
+      @@include('bem-blocks/single-product/product-description/product-description.html')
+      @@include('bem-blocks/single-product/product-credits/product-credits.html')
+    </div>
+  </div>
 </div>

@@ -7,17 +7,20 @@
   "favicon":"img/favicons/favicon",
   })
 <body>
-  <div class="body--inner flex --dir-column">
+  <div class="flex --dir-column">
     @@include('page-blocks/header/header.html')
-    <main class="main">      
-      @@include('bem-blocks/products/products.html', {
+    <main class="main">
+      @@include('bem-blocks/topbar/topbar.html', {
+        "ifBreadcrumps":"@@include('bem-blocks/breadcrumps/breadcrumps.html')",
         "ifTopbarSubcategories":"",
         "ifTopbarSearch":"",
-        "iffilter":"@@include('bem-blocks/topbar/products-filter/products-filter.html')",
+        "ifTopbarFilter":"@@include('bem-blocks/topbar/topbar-filter/topbar-filter.html')",
         "item1":"Aurahome",
         "item2":"спальня",
-        "item3":"постельное белье"
-      })
+        "item3":"постельное белье",
+        "color":"grey"
+      })      
+      @@include('bem-blocks/products/products.html')
       @@include('bem-blocks/new-products-slider/new-products-slider.html')
     </main>
     @@include('page-blocks/footer/footer.html')

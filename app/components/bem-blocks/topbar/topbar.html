@@ -1,10 +1,8 @@
-<div class="topbar">
-  @@include('bem-blocks/breadcrumps/breadcrumps.html', {
-    "item1":"@@item1",
-    "item2":"@@item2",
-    "item3":"@@item3"
-  })
-  @@ifTopbarSubcategories
-  @@ifTopbarSearch
-  @@iffilter
+<div class="topbar bg bg_@@color">
+  <div class="width">
+    @@ifBreadcrumps
+    @@ifTopbarSubcategories
+    @@ifTopbarSearch
+    @@ifTopbarFilter
+  </div>
 </div>

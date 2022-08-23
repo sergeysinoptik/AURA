@@ -2,7 +2,7 @@
 /* eslint-disable prefer-arrow-callback */
 /* eslint-disable no-undef */
 $(document).ready(function () {
-  $('.main-slider').slick({
+  $('.main-slider__slider').slick({
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,

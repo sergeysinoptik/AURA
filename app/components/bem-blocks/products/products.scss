@@ -1,3 +1,19 @@
-.products {
-  background: var(--soft-grey-bg);
+.products-loop {
+  padding-bottom: 83px;
+}
+
+.loop-grid {
+  grid-template-columns: repeat(4, 24.1%);
+  display: grid;
+  column-gap: 16px;
+  row-gap: 16px;
+  padding: 0 16px;
+}
+
+.loop-grid_columns_3 {
+  grid-template-columns: repeat(3, 32.55%) !important;
+}
+
+.loop-grid_columns_4 {
+  grid-template-columns: repeat(4, 24.1%);
 }

@@ -1,4 +1,4 @@
-.products-filter_sticky {
+.topbar-filter_sticky {
   position: fixed;
   width: 100%;
   top: 100px;
@@ -7,7 +7,7 @@
   background: #ffffff;
   z-index: 30;
   transition: all 0.5s;
-  .products-filter__inner {
+  .topbar-filter__inner {
     padding-top: 17px;
     padding-bottom: 17px;
   }
