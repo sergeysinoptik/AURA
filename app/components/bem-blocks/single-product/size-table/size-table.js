@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-restricted-syntax */
 /* global document, window */
 const sizeTableItems = document.querySelectorAll('.size-table__item');
@@ -22,51 +23,14 @@ function sizeTableItemsToggle() {
   }
 }
 
-function changeButtonText(button, price, qnt) {
-  let quantity = 0;
-  console.log(quantity, 'quantity1')
-  const tableItems = document.querySelectorAll('.size-table__item');
-  for (let item of tableItems) {
-    let price = item.querySelector('.price p').innerHTML;
-    price = price.substr(0, price.length - 4);
-
-    let currentQuantity = item.querySelector('input').value;
-    quantity += currentQuantity;
-    console.log(quantity, 'quantity2')
-
-    const quantitySteps = item.querySelectorAll('.quantity-step');
-    for (const i of quantitySteps) {
-      i.addEventListener('click', (e) => {
-        const q = i.querySelector('input').value;
-  
-        console.log(q);
-      })
-    }
-  }
-}
-
 let quantity = 0;
 
-function quantityStepDown(e) {
-  const v = e.nextElementSibling.value;
-  if (v > 0) {
-    e.nextElementSibling.stepDown();
-    if (quantity > 0) {
-      quantity -= 1;
-      const addToCartButton = document.querySelector('.add-to-cart_single-product button');
-      addToCartButton.innerHTML = 'Добавить в корзину ' + quantity;
-    }
-  }
-  console.log(quantity, '--')
+function getCurrentPrice(item) {
+  const currentPrice = item.querySelector('.price p').innerHTML;
+  return currentPrice.substr(0, currentPrice.length - 4);
 }
 
-function quantityStepUp(e) {
-  e.previousElementSibling.stepUp();
-  quantity += 1;
-  console.log(quantity, '++')
-}
-
-function aaa(p, q) {
+function changeAddToCartText(p, q) {
   const addToCartButton = document.querySelector('.add-to-cart_single-product button');
   const firstText = 'Добавить в корзину ';
   let secondText = '';
@@ -79,21 +43,35 @@ function aaa(p, q) {
   } else {
     secondText = 'товаров';
   }
-  addToCartButton.innerHTML = `${firstText}${q} ${secondText} (${p * q} руб)`;
-}
 
-function addToCartText(target) {
-  console.log(target.querySelector('input').value, 'target')
-  let price = target.querySelector('.price p').innerHTML;
-  price = price.substr(0, price.length - 4);
-  aaa(price, quantity);
-}
-
-function addToCartTextChange() {
-  for (const item of sizeTableItems) {
-    addToCartText(item);
+  if (q === 0) {
+    addToCartButton.innerHTML = `${firstText}`;
+  } else {
+    addToCartButton.innerHTML = `${firstText}${q} ${secondText} (${p * q} руб)`;
   }
 }
 
+function quantityStepDown(currentItem) {
+  const quantitySelects = currentItem.parentNode;
+  const tableItem = quantitySelects.parentNode;
+  const price = getCurrentPrice(tableItem);
+  const v = currentItem.nextElementSibling.value;
+  if (v > 0) {
+    currentItem.nextElementSibling.stepDown();
+    if (quantity > 0) {
+      quantity -= 1;
+      changeAddToCartText(price, quantity);
+    }
+  }
+}
+
+function quantityStepUp(currentItem) {
+  const quantitySelects = currentItem.parentNode;
+  const tableItem = quantitySelects.parentNode;
+  const price = getCurrentPrice(tableItem);
+  currentItem.previousElementSibling.stepUp();
+  quantity += 1;
+  changeAddToCartText(price, quantity);
+}
+
 window.onload = sizeTableItemsToggle();
-window.onload = addToCartTextChange();
