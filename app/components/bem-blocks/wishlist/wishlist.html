@@ -1,0 +1,22 @@
+<div class="wishlist bg bg_grey">
+  <div class="products-loop width">
+    <div class="wishlist__title">
+      <h3>5 товаров в списке желаний</h3>
+    </div>
+    <div class="loop-grid">
+      @@for (var i = 0; i < 5; i++) {
+        @@include('bem-blocks/products/products-loop/product-card/product-card.html', {
+          "imagesize": "product-card__images_size_medium"
+        })
+      }
+    </div>
+  </div>
+</div>
+<div class="wishlist__add-to-cart bg bg_white">
+  <div class="width">
+    @@include('bem-blocks/add-to-cart/add-to-cart.html', {
+      "modificator":"add-to-cart_single-product",
+      "btnMod":"btn_color_green"
+    })
+  </div>
+</div>

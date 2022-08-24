@@ -10,7 +10,18 @@
   <div class="flex --dir-column">
     @@include('page-blocks/header/header.html')
     <main class="main">
-      <div>aaa</div>
+      @@include('bem-blocks/topbar/topbar.html', {
+        "ifBreadcrumps":"@@include('bem-blocks/breadcrumps/breadcrumps.html')",
+        "ifTopbarSubcategories":"",
+        "ifTopbarSearch":"",
+        "ifTopbarFilter":"",
+        "item1":"@@item1",
+        "item2":"@@item2",
+        "item3":"@@item3",
+        "color":"grey"
+      })
+      @@include('bem-blocks/wishlist/wishlist.html')
+      button
     </main>
     @@include('page-blocks/footer/footer.html')
     @@include('page-blocks/footer/scripts.html')
