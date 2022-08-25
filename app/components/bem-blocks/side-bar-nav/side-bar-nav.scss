@@ -1,0 +1,135 @@
+#sticky-side {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: calc(0px - 100px);
+  display: flex;
+  align-items: center;
+  height: 100%;
+  z-index: 20;
+}
+
+.contact-btn {
+  height: 16px;
+  width: 187px;
+  background: url("/img/side-bar-nav.svg") center center no-repeat;
+  color: #fff;
+  line-height: 50px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transform: translatex(-86px) rotate(90deg);
+  cursor: pointer;
+}
+#side-box {
+  padding: 0;
+  border: 1px solid #e1e1e1;
+  border-right: 0;
+  height: 100%;
+  max-height: calc(100vh - 20px);
+  overflow-y: auto;
+  background: #fff;
+  width: 285px;
+  max-width: 285px;
+  margin-left: -185px;
+  transition: all 0.5s;
+  box-sizing: border-box;
+  margin-top: 178px;
+  z-index: 1500;
+}
+#side-box .side-header {
+  display: block;
+  background-color: #fff;
+  padding: 0;
+  color: #fff;
+  position: relative;
+}
+#side-box .side-header i {
+  font-size: 20px;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.open-box {
+  margin-left: 100px !important;
+  background: #ffffff;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
+}
+
+.contact-btn.opened {
+  margin-left: 0;
+}
+
+.side-header {
+  margin-top: 20px;
+}
+
+.to-margin + .main {
+  margin-left: 280px;
+  width: calc(100% - 280px);
+  transition: all 0.5s;
+  .width,
+  .topbar-subcategories,
+  .topbar-filter__inner {
+    width: calc(1440px - 300px);
+  }
+  .topbar-filter__inner {
+    padding-left: 20px;
+  }
+  .topbar-subcategories {
+    padding: 40px 99px 0;
+  }
+}
+
+.open-box + .contact-btn {
+  background-size: 115%;
+  transform: translatex(-101px) rotate(90deg);
+  z-index: 4000;
+}
+
+.side-bar-nav {
+  .side-popup_close {
+    top: 24px;
+    right: 24px;
+  }
+  .wrapper {
+    padding: 0 40px 40px;
+  }
+}
+.side-bar-nav-menu {
+  overflow-x: auto;
+  max-height: 80vh;
+}
+.side-bar-nav-menu > ul {
+  row-gap: 24px;
+  & > li > a {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--main-grey);
+  }
+}
+
+.side-bar-nav-menu-level-1 {
+  row-gap: 8px;
+  & > ul {
+    row-gap: 8px;
+  }
+}
+
+.side-bar-nav-menu-level-2 {
+  a {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    color: var(--main-grey);
+  }
+}
