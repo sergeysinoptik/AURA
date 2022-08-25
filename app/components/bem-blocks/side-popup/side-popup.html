@@ -1,0 +1,38 @@
+<div class="side-popup side-popup__size" id="side-popup-size" role="alert">
+  <div class="side-popup_container bg bg_grey">
+    <div class="wrapper flex --dir-column">
+      <h4>Таблица размеров</h4>
+      <div class="popup-block flex --dir-column bg bg_white">
+        <h5>Как измерить</h5>
+        <img src="/img/howtosize.webp" alt="">
+        <div class="steps-block flex --dir-column">
+          <div class="step-item flex">
+            <div class="inner flex --dir-column">
+                <h6>Грудь</h6>
+                <p>Измерьте свою грудь по самой полной части бюста, надевая бюстгальтер, который подходит.</p>
+            </div>
+          </div>
+          <div class="step-item flex">
+            <div class="inner flex --dir-column">
+                <h6>Талия</h6>
+                <p>Измерьте талию в самом узком месте.</p>
+            </div>
+          </div>
+          <div class="step-item flex">
+            <div class="inner flex --dir-column">
+                <h6>Длина руки</h6>
+                <p>Измерьте от плеча до запястья.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-block flex --dir-column bg bg_white">
+        <h5>Выберете размерный ряд</h5>
+        <div class="tabs-block">
+          @@include('bem-blocks/tabs/tabs.html')
+        </div>
+      </div>
+    </div>
+    <a href="#" class="side-popup_close img-replace">X</a>
+  </div>
+</div>
