@@ -1,0 +1,110 @@
+.popup-cart {
+  padding: 32px 32px 26px;
+  row-gap: 24px;
+  height: 100%;
+  &__title {
+    flex: 0 0 auto;
+    h5,
+    a {
+      font-family: "Noto Sans";
+      font-style: normal;
+      line-height: 140%;
+      color: var(--main-grey);
+    }
+    h5 {
+      font-weight: 400;
+      font-size: 16px;
+    }
+    a {
+      font-weight: 500;
+      font-size: 8px;
+      text-decoration-line: underline;
+      text-transform: uppercase;
+    }
+  }
+  &__products {
+    flex: 1 0 auto;
+    row-gap: 24px;
+    overflow-x: auto;
+    max-height: 60vh;
+  }
+  &__product {
+    a {
+      column-gap: var(--unit-16);
+    }
+  }
+  &__product-info {
+    h4 {
+      font-family: "Noto Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 140%;
+      text-transform: uppercase;
+      color: #4e4e4e;
+      text-align: left;
+    }
+  }
+  &__product-parameters {
+    p {
+      font-family: "Noto Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 140%;
+      color: #4e4e4e;
+      text-align: left;
+    }
+  }
+  &__product-price {
+    p {
+      font-family: "Noto Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: #4e4e4e;
+      text-align: left;
+    }
+  }
+  &__footer {
+    flex: 0 0 auto;
+  }
+  &__footer-subresult {
+    width: 100%;
+    row-gap: 12px;
+    padding: 16px 0;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+  }
+  &__footer-result {
+    padding: 12px 0 24px;
+  }
+  &__footer-buttons {
+    row-gap: 12px;
+  }
+}
+
+.subresult {
+  &__text,
+  &__price {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 140%;
+    color: var(--main-grey);
+  }
+}
+
+.result {
+  &__text,
+  &__price {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--main-grey);
+  }
+}
