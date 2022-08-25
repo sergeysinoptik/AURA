@@ -1,0 +1,18 @@
+.slider_deleting_enabled {
+  box-sizing: border-box;
+  outline: none;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background: url(../img/icon-trash.svg) center center no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 11;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+}

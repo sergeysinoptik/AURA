@@ -3,7 +3,8 @@
     <div class="loop-grid">
       @@for (var i = 0; i < 12; i++) {
         @@include('bem-blocks/products/products-loop/product-card/product-card.html', {
-          "imagesize": "product-card__images_size_medium"
+          "imagesize": "product-card__images_size_medium",
+          "modificator": "slider_dots_disabled slider_arrows_hover slider_favourites_enabled"
         })
       }
     </div>

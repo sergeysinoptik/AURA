@@ -6,7 +6,8 @@
     <div class="loop-grid">
       @@for (var i = 0; i < 5; i++) {
         @@include('bem-blocks/products/products-loop/product-card/product-card.html', {
-          "imagesize": "product-card__images_size_medium"
+          "imagesize": "product-card__images_size_medium",
+          "modificator":"slider_dots_disabled slider_arrows_hover slider_deleting_enabled"
         })
       }
     </div>
@@ -14,9 +15,12 @@
 </div>
 <div class="wishlist__add-to-cart bg bg_white">
   <div class="width">
-    @@include('bem-blocks/add-to-cart/add-to-cart.html', {
-      "modificator":"add-to-cart_single-product",
-      "btnMod":"btn_color_green"
-    })
+    <div class="wishlist__add-to-cart-wrapper">
+      @@include('bem-blocks/add-to-cart/add-to-cart.html', {
+        "modificator":"add-to-cart_wishlist",
+        "btnMod":"btn_color_green",
+        "text":"Добавить в корзину все товары (12000 руб)"
+      })
+    </div>
   </div>
 </div>
