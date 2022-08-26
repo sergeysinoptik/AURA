@@ -1,0 +1,132 @@
+.accordion-body {
+  width: 100%;
+  margin: auto;
+}
+
+.single-acco.active:not(.opacitied) {
+  border: 1px solid #4e4e4e;
+  margin-bottom: 16px;
+  transition: 0.5s;
+  background: #fff;
+  h2 {
+    border: none;
+  }
+}
+
+.single-acco h2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border: 1px solid #4e4e4e;
+
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  color: #4e4e4e;
+  padding: 1rem;
+  cursor: pointer;
+  margin-bottom: 16px;
+  span {
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 16px;
+      height: 22px;
+      background: url("/img/dropdown.svg") center center no-repeat;
+      -webkit-transition: 0.5s;
+      -o-transition: 0.5s;
+      transition: 0.5s;
+      position: relative;
+      top: -10px;
+      right: 20px;
+    }
+  }
+  span.active::after {
+    transform: rotate(-180deg);
+  }
+}
+
+.opacitied h2 {
+  background: #eeeeee;
+  border: 1px dashed #4e4e4e;
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 140%;
+  color: #4e4e4e;
+  span {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    border: 1px solid #4e4e4e;
+    border-radius: 50%;
+    font-size: 16px;
+    line-height: 140%;
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.accodion-body {
+  background: #fff;
+  padding: 1rem;
+  margin-bottom: 20px;
+  display: none;
+}
+.accodion-body:first-child {
+  display: block;
+}
+
+.account-tab-content form {
+  row-gap: 16px;
+  div {
+    width: 100%;
+  }
+  .acco-form-buttons {
+    width: 372px !important;
+    align-self: flex-end;
+    margin-right: -8px;
+  }
+  label {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    color: #4e4e4e;
+    padding-bottom: 8px;
+  }
+  input {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 140%;
+    color: #4e4e4e;
+    height: 40px;
+    padding: 11px;
+    width: 100%;
+    &::placeholder {
+      color: #B0B0B0;
+    }
+  }
+  .btn_size_m button {
+    padding: var(--unit-16) 0;
+    text-align: center;
+  }
+  .btn_color_white button,
+  .btn_color_green button {
+    border: 1px solid #4E4E4E;
+    width: 178px;
+  }
+}

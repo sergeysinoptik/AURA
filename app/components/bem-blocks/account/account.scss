@@ -8,6 +8,7 @@
 .tabs_menu {
   width: 500px;
   float: left;
+  flex-shrink: 0;
 }
 
 ul.tabs {
@@ -91,6 +92,16 @@ ul.tabs li .account-tab-item::before {
   height: auto;
 }
 
+#tab3_content {
+  border: 1px solid #4e4e4e;
+  padding: 32px 32px 32px 24px;
+  background: #fff;
+  .btn.btn_color_green.btn_size_m {
+    width: auto;
+    margin-right: 8px;
+  }
+}
+
 /* hover effect */
 
 ul.tabs li {
@@ -120,6 +131,10 @@ ul.tabs li:hover:before {
   transform: scaleX(1);
 } */
 
+.orders-history {
+  margin-right: 78px;
+}
+
 .orders-history .order {
   padding: 24px 0;
   border-bottom: 1px solid #A0A0A0;
@@ -135,7 +150,6 @@ ul.tabs li:hover:before {
 }
 
 .order-info {
-  margin-right: 78px;
   column-gap: 24px;
 }
 
