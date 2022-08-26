@@ -29,13 +29,13 @@ $(document).ready(function () {
   });
 });
 
-const $carousel = $('.slider-products');
+/* const $carousel = $('.slider-products');
 
 const settings = {
   dots: false,
   arrows: false,
   slide: '.slider-item',
-  slidesToShow: 4,
+  slidesToShow: 5,
   centerMode: true,
   centerPadding: '160px',
   speed: 300,
@@ -61,7 +61,7 @@ setSlideVisibility();
 
 $carousel.on('afterChange', function () {
   setSlideVisibility();
-});
+}); */
 
 
 

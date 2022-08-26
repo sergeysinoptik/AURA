@@ -1,0 +1,58 @@
+.new-p {
+  h2 {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 140%;
+    color: #4e4e4e;
+    padding: 64px 0 24px 88px;
+  }
+}
+
+.slider {
+  padding-bottom: 64px;
+}
+
+.slider > .slick-list {
+  padding: 0 12% 0 0 !important;
+}
+
+.slick-slideshow__slide h3 {
+  background: #fff;
+  color: black;
+  font-size: 36px;
+  line-height: 100px;
+  margin: 10px;
+  padding: 2%;
+  position: relative;
+  text-align: center;
+}
+
+.slider {
+  max-width: 1264px;
+  margin: 0 auto;
+  background: #fff;
+  & > .slick-next,
+  & > .slick-prev {
+    top: 40%;
+    width: 72px;
+    height: 80%;
+    &::before,
+    &::after {
+      width: 72px;
+      height: 72px;
+    }
+    &::before {
+      background-size: 24%;
+    }
+  }
+  & > .slick-disabled {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.slick-list {
+  padding-left: 0px !important; // half partial
+}

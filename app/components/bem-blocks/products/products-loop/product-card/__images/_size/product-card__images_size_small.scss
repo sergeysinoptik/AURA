@@ -1,0 +1,21 @@
+.product-card__images_size_small {
+  width: 258px;
+  height: 315px;
+  .product-image,
+  .slider-product-card {
+    width: 258px;
+    height: 315px;
+  }
+  .slick-arrow {
+    height: 315px;
+  }
+  .slick-list,
+  .slick-track {
+    height: 386px !important;
+  }
+  /*
+  .slider-products > .slick-list > .slick-track > .slider-item {
+    width: 298px !important;
+    margin: 0 24px !important;
+  } */
+}

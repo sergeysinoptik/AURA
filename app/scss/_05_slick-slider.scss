@@ -3,16 +3,28 @@
 
 
 .slider-products {
-  max-width: 1440px;
+  max-width: 1264px;
+  max-height: 392px;
+  //width: 1264px;
   margin: 0 auto;
 
-  &>.slick-list {
+  & >.slick-list {
     padding-left: 0px !important;
+    margin-left: -20px !important;
+    max-width: 1264px !important;
+    max-height: 392px !important;
+    & > .slick-track {
+      max-width: 1264px !important;
+      max-height: 392px !important;
+    }
   }
 
   .slider-item {
     width: 258px !important;
     margin-right: 24px !important;
+    .product-image {
+      margin-left: -24px !important;
+    }
   }
 }
 
