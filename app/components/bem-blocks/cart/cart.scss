@@ -1,0 +1,174 @@
+.cart-block {
+  .width {
+    .wrapper {
+      padding: 64px 88px 44px;
+      column-gap: 80px;
+    }
+  }
+  .quantity-selects {
+    display: block;
+  }
+}
+
+.cart-block-products {
+  width: 688px;
+}
+
+.cart-block-controls {
+  width: 496px;
+  row-gap: 20px;
+}
+
+.cart-block-product {
+  padding: 24px 0;
+  width: 100%;
+  border-bottom: 1px solid #a0a0a0;
+  &.deleting_enabled {
+    box-sizing: border-box;
+    outline: none;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 40px;
+      height: 40px;
+      background: url(../img/icon-trash.svg) center center no-repeat;
+      position: absolute;
+      top: 15px;
+      right: 0;
+      z-index: 11;
+      cursor: pointer;
+      box-sizing: border-box;
+    }
+  }
+}
+
+.cart-block-product:first-child {
+  padding-top: 0;
+}
+
+.cart-block-product:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.cart-block-product-inner {
+  column-gap: 24px;
+}
+
+.cart-block-product__product-info {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.cart-block-product__product-parameters {
+  column-gap: 52px;
+}
+
+.cart-block-product-title,
+.cart-block-product-price {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #4e4e4e;
+}
+
+.cart-block-product__product-parameters > div > p {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  color: #4e4e4e;
+}
+
+.cart-block-result {
+  padding: 48px 24px;
+}
+
+.cart-block-delivery {
+  padding: 24px;
+}
+
+.products-count h3 {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  color: #4e4e4e;
+  margin-bottom: 8px;
+}
+
+.after-cart-result {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 140%;
+  text-align: center;
+  color: #000000;
+  margin-top: 25px;
+  padding: 0 calc(70px - 24px);
+}
+
+.cart-block-delivery .accodion-body {
+  border: 0;
+  padding: 0 !important;
+  margin: 0 !important;
+  &:first-child {
+    display: block !important;
+  }
+  .single-acco {
+    border: 0;
+    h2 {
+      border: 0 !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      font-family: "Noto Sans";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 140%;
+      color: #000000;
+      display: flex;
+      justify-content: start;
+      column-gap: 16px;
+      position: relative;
+      span::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background: url("/img/icon-delivery-rules.svg") center center no-repeat;
+      }
+    }
+    h5 {
+      padding: 24px 0 12px;
+      font-family: "Noto Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 140%;
+      color: #000000;
+      border-bottom: 1px solid #eeeeee;
+    }
+    p {
+      padding-top: 12px;
+      padding-right: 100px;
+      font-family: "Noto Sans";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 140%;
+      color: #000000;
+    }
+  }
+}
