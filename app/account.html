@@ -10,7 +10,17 @@
   <div class="flex --dir-column">
     @@include('page-blocks/header/header.html')
     <main class="main">
-      <div>aaa</div>
+      @@include('bem-blocks/topbar/topbar.html', {
+        "ifBreadcrumps":"@@include('bem-blocks/breadcrumps/breadcrumps.html')",
+        "ifTopbarSubcategories":"",
+        "ifTopbarSearch":"",
+        "ifTopbarFilter":"",
+        "item1":"Aurahome",
+        "item2":"одежда и обувь",
+        "item3":"женская",
+        "color":"grey"
+      })
+      @@include('bem-blocks/account/account.html')
       @@include('bem-blocks/new-products-slider/2.html')
     </main>
     @@include('page-blocks/footer/footer.html')
