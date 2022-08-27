@@ -58,19 +58,19 @@ ul.tabs li .account-tab-item::before {
 }
 
 #tab1 .account-tab-item::before {
-  background: url("./img/icon-history.svg") center center no-repeat;
+  background: url("../img/icon-history.svg") center center no-repeat;
 }
 
 #tab2 .account-tab-item::before {
-  background: url("./img/icon-map.svg") center center no-repeat;
+  background: url("../img/icon-map.svg") center center no-repeat;
 }
 
 #tab3 .account-tab-item::before {
-  background: url("./img/icon-contact.svg") center center no-repeat;
+  background: url("../img/icon-contact.svg") center center no-repeat;
 }
 
 #tab4 .account-tab-item::before {
-  background: url("./img/icon-logout.svg") center center no-repeat;
+  background: url("../img/icon-logout.svg") center center no-repeat;
 }
 
 /* ul.tabs li:hover {

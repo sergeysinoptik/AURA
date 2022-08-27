@@ -26,10 +26,10 @@
       height: 24px;
     }
     &.icon-share::after {
-      background: url('./img/icon-share.svg') center center no-repeat;
+      background: url('../img/icon-share.svg') center center no-repeat;
     }
     &.icon-favs::after {
-      background: url('./img/icon-favourite-topbar.svg') center center no-repeat;
+      background: url('../img/icon-favourite-topbar.svg') center center no-repeat;
     }
   }
   &__price {
