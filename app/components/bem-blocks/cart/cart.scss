@@ -32,7 +32,7 @@
       content: "";
       width: 40px;
       height: 40px;
-      background: url(../img/icon-trash.svg) center center no-repeat;
+      background: url('./img/icon-trash.svg') center center no-repeat;
       position: absolute;
       top: 15px;
       right: 0;
@@ -147,7 +147,7 @@
         display: inline-block;
         width: 24px;
         height: 24px;
-        background: url("/img/icon-delivery-rules.svg") center center no-repeat;
+        background: url("./img/icon-delivery-rules.svg") center center no-repeat;
       }
     }
     h5 {
