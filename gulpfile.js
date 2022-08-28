@@ -28,12 +28,25 @@ import sprite from 'gulp-svg-sprite';
 import ttf2woff2 from 'gulp-ttftowoff2';
 import ttf2woff from 'gulp-ttf2woff';
 import chalk from 'chalk'; // Раскрашиваем консоль при ошибке
+import gcmq from 'gulp-group-css-media-queries'; //del
+import modifyCssUrls from 'gulp-modify-css-urls'; //del
+import rebase from 'gulp-css-url-rebase'; //del
 
 const {
   src, dest, parallel, series, watch,
 } = gulp;
 
 const sass = gulpSass(dartSass);
+
+const paths = {
+  prod: {
+    build: './docs',
+  },
+  scss: {
+    src: ['app/scss/**/*.scss', '!app/scss/libs.scss'],
+    dest: './docs/css',
+  },
+};
 
 // Тестирование GULP
 gulp.task('hello', () => {
@@ -44,7 +57,7 @@ gulp.task('hello', () => {
 gulp.task('browser-sync', () => {
   browserSync({ // Выполняем browser Sync
     server: { // Определяем параметры сервера
-      baseDir: 'docs', // Директория для сервера - app
+      baseDir: 'docs', // Директория для сервера - docs
     },
     notify: false,
     online: true, // Отключаем уведомления
@@ -52,9 +65,10 @@ gulp.task('browser-sync', () => {
 });
 
 // Компиляция всех файлов SCSS в CSS
-gulp.task('sass', () => src(['app/scss/**/*.scss', '!app/scss/libs.scss']) // выбираем папку
+gulp.task('sass', () => src(paths.scss.src) // выбираем папку
   .pipe(map.init()) // Инициализировать карту исходных файлов (sourcemaps)
   .pipe(bulk()) // чтобы scss-файлы можно было импортировать не по одному, а целыми директориями
+  .pipe(concat('style.scss'))
   .pipe(sass({
     outputStyle: 'compressed',
   }).on('error', sass.logError)) // компилируем
@@ -62,9 +76,10 @@ gulp.task('sass', () => src(['app/scss/**/*.scss', '!app/scss/libs.scss']) // в
   .pipe(clean({
     level: 2,
   })) // Очистить от лишнего
-  .pipe(concat('style.min.css')) // Склеить в единый файл style.css
+  .pipe(rename('style.min.css'))
+  //.pipe(concat('style.min.css')) // Склеить в единый файл style.css
   .pipe(map.write('../sourcemaps/')) // Записать карту исходных файлов в получившемся файле
-  .pipe(dest('docs/css')) // выгружаем в прод
+  .pipe(dest(paths.scss.dest)) // выгружаем в прод
   .pipe(browserSync.reload({ stream: true }))); // обновляем браузер
 
 // Минификация библиотек CSS

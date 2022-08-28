@@ -1,0 +1,15 @@
+import modifyCssUrls from 'gulp-modify-css-urls';
+import gcmq from 'gulp-group-css-media-queries';
+
+.pipe(modifyCssUrls({
+  modify(url, filePath) {
+    return url.replace('/app/img/', '../img/'); // Меняем пути в файлах css
+  },
+}))
+.pipe(modifyCssUrls({
+  modify(url, filePath) {
+    return url.replace('img/', '../img/'); // Меняем пути в файлах css
+  },
+}))
+
+.pipe(gcmq())
