@@ -1,3 +1,29 @@
 .collection-slider {
   margin-bottom: var(--unit-16);
 }
+
+.collection-slide-bg {
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+.ratio {
+  width: 100%;
+}
+
+.ratio-inner {
+  position: relative;
+  height: 0;
+  border: none;
+  padding-top: 103.456%;
+}
+
+.ratio-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: transparent;
+}

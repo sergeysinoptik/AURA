@@ -1,9 +1,9 @@
-.accordion-body {
+.accordion {
   width: 100%;
   margin: auto;
 }
 
-.single-acco.active:not(.opacitied) {
+.accordion-item.active:not(.opacitied) {
   border: 1px solid #4e4e4e;
   margin-bottom: 16px;
   transition: 0.5s;
@@ -13,7 +13,7 @@
   }
 }
 
-.single-acco h2 {
+.accordion-item h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -77,14 +77,11 @@
   }
 }
 
-.accodion-body {
+.accordion-item__body {
   background: #fff;
   padding: 1rem;
   margin-bottom: 20px;
   display: none;
-}
-.accodion-body:first-child {
-  display: block;
 }
 
 .account-tab-content form {

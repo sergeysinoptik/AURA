@@ -1,4 +1,4 @@
-var $carouselle = $('.slider');
+var $carouselle = $('.products-slider');
 
 var settings22 = {
   dots: false,

@@ -1,10 +1,10 @@
 .menu-dropdown-item {
   position: absolute;
   z-index: 35;
-  margin: 35px 40px;
+  margin: 35px auto;
   width: 1360px;
   background: #fff;
-  left: 0;
+  left: 11%;
   display: none;
   &__wrapper {
     padding: 52px 149px;

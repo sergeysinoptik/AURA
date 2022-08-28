@@ -114,14 +114,12 @@
   padding: 0 calc(70px - 24px);
 }
 
-.cart-block-delivery .accodion-body {
+.cart-block-delivery .accordion {
   border: 0;
   padding: 0 !important;
   margin: 0 !important;
-  &:first-child {
-    display: block !important;
-  }
-  .single-acco {
+  
+  .accordion-item {
     border: 0;
     h2 {
       border: 0 !important;

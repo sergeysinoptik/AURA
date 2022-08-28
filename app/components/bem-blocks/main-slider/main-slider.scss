@@ -2,9 +2,12 @@
   height: 912px;
   .slider-item {
     background: url(../img/slide.webp);
+    background-size: cover;
     height: 912px;
     a.item__text {
       height: 100%;
+      width: 1440px;
+      margin: 0 auto;
       h1 {
         font-family: 'Raleway';
         font-style: normal;

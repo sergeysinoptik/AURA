@@ -31,6 +31,12 @@ import chalk from 'chalk'; // Раскрашиваем консоль при о�
 import gcmq from 'gulp-group-css-media-queries'; //del
 import modifyCssUrls from 'gulp-modify-css-urls'; //del
 import rebase from 'gulp-css-url-rebase'; //del
+import mmq from 'gulp-merge-media-queries'; //del
+import cmq from 'gulp-combine-media-queries'; //del
+import jmq from 'gulp-join-media-queries';  //del
+import g from 'gulp-extract-media-queries'; //del
+import splitMediaQueries from 'gulp-split-media-queries'; //del
+import combineMedia from 'gulp-combine-media';
 
 const {
   src, dest, parallel, series, watch,
@@ -39,12 +45,58 @@ const {
 const sass = gulpSass(dartSass);
 
 const paths = {
-  prod: {
-    build: './docs',
-  },
-  scss: {
+  browserSyncBaseDir: 'docs',
+  map: '../sourcemaps/',
+  css: {
     src: ['app/scss/**/*.scss', '!app/scss/libs.scss'],
     dest: './docs/css',
+  },
+  cssLibs: {
+    src: 'app/scss/libs.scss',
+    dest: './docs/css',
+  },
+  devJs: {
+    src: [
+      'app/components/**/*.js',
+      'app/js/01_main.js',
+    ],
+    dest: 'docs/js/',
+  },
+  libJs: {
+    src: [ // Берем все необходимые библиотеки
+      'app/libs/jquery/dist/jquery.min.js',
+      'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
+      'app/libs/slick-carousel/slick/slick.min.js',
+    ],
+    dest: 'docs/js/',
+  },
+  html: {
+    src: [
+      'app/**/*.html',
+      '!app/components/**/*.html',
+    ],
+    basepath: 'app/components/',
+    dest: 'docs',
+  },
+  php: {
+    src: 'app/**/*.php',
+    basepath: 'app/components/',
+    dest: 'docs',
+  },
+  img: {
+    srcRastr: 'app/img/**/*.+(png|jpg|jpeg|gif|svg|ico)',
+    srcWebp: 'docs/img/**/*.+(png|jpg|jpeg)',
+    srcSvgCss: 'app/svg/css/**/*.svg',
+    changed: 'docs/img',
+    dest: 'docs/img',
+    multiDest: ['app/img', 'docs/img'],
+  },
+  svg: {
+    src: 'app/svg/css/**/*.svg',
+    spriteSrc: 'app/svg/**/*.svg',
+    dest: 'app/scss/global',
+    sprite: '../sprite.svg',
+    spriteDest: 'app/img',
   },
 };
 
@@ -55,108 +107,84 @@ gulp.task('hello', () => {
 
 // Browser Sync
 gulp.task('browser-sync', () => {
-  browserSync({ // Выполняем browser Sync
-    server: { // Определяем параметры сервера
-      baseDir: 'docs', // Директория для сервера - docs
+  browserSync({
+    server: {
+      baseDir: paths.browserSyncBaseDir, // Директория для сервера
     },
     notify: false,
     online: true, // Отключаем уведомления
   });
 });
 
-// Компиляция всех файлов SCSS в CSS
-gulp.task('sass', () => src(paths.scss.src) // выбираем папку
-  .pipe(map.init()) // Инициализировать карту исходных файлов (sourcemaps)
+// CSS
+gulp.task('sass', () => src(paths.css.src) // выбираем папку
+  .pipe(map.init()) // Инициализировать sourcemaps
   .pipe(bulk()) // чтобы scss-файлы можно было импортировать не по одному, а целыми директориями
-  .pipe(concat('style.scss'))
+  .pipe(concat('style.min.scss'))
   .pipe(sass({
     outputStyle: 'compressed',
-  }).on('error', sass.logError)) // компилируем
+  }).on('error', sass.logError))
   .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
   .pipe(clean({
     level: 2,
   })) // Очистить от лишнего
   .pipe(rename('style.min.css'))
-  //.pipe(concat('style.min.css')) // Склеить в единый файл style.css
-  .pipe(map.write('../sourcemaps/')) // Записать карту исходных файлов в получившемся файле
-  .pipe(dest(paths.scss.dest)) // выгружаем в прод
-  .pipe(browserSync.reload({ stream: true }))); // обновляем браузер
+  .pipe(map.write(paths.map)) // Записать карту исходных файлов в получившемся файле
+  .pipe(dest(paths.css.dest)) // выгружаем в прод
+  .pipe(browserSync.reload({ stream: true })));
 
-// Минификация библиотек CSS
-gulp.task('css-libs', () => src('app/scss/libs.scss') // Выбираем файл для минификации. Предварительно устанавливаем библиотеки с помощью bower и импортируем нужное в файл libs.scss. Например 'bower i jquery'
+// CSS Libs
+gulp.task('css-libs', () => src(paths.cssLibs.src) // Выбираем файл для минификации. Предварительно устанавливаем библиотеки с помощью bower и импортируем нужное в файл libs.scss. Например 'bower i jquery'
   .pipe(map.init())
   .pipe(sass({
     outputStyle: 'compressed',
-  }).on('error', sass.logError)) // Преобразуем Sass в CSS посредством gulp-sass
+  }).on('error', sass.logError))
   .pipe(cssnano()) // Сжимаем
   .pipe(rename({ suffix: '.min' })) // Добавляем суффикс .min
-  .pipe(map.write('../sourcemaps/'))
-  .pipe(dest('docs/css')) // Выгружаем в прод
+  .pipe(map.write(paths.map))
+  .pipe(dest(paths.cssLibs.dest)) // Выгружаем в прод
   .pipe(browserSync.reload({ stream: true }))); // обновляем браузер
 
-// Обработка файлов JS - delete
-gulp.task('scripts', () => src(['app/js/common.js', 'app/libs/**/*.js']) // собираем файлы для отслеживания
-  .pipe(browserSync.reload({ stream: true }))); // обновляем браузер
-
-// Обработка библиотек JS - delete
-gulp.task('libs', () => src([ // Берем все необходимые библиотеки
-  'app/libs/jquery/dist/jquery.min.js', // Берем jQuery
-  'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js', // Берем Magnific Popup
-])
-  .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле
-  .pipe(uglify()) // Сжимаем JS файл
-  .pipe(dest('app/js'))); // Выгружаем в папку
-
-gulp.task('devJs', () => src([
-  'app/components/**/*.js',
-  'app/js/01_main.js',
-])
+gulp.task('devJs', () => src(paths.devJs.src)
   .pipe(map.init())
   //.pipe(uglify())
   .pipe(concat('main.min.js'))
-  .pipe(map.write('../sourcemaps'))
-  .pipe(dest('docs/js/'))
-  .pipe(browserSync.reload({ stream: true }))); // обновляем браузер
+  .pipe(map.write(paths.map))
+  .pipe(dest(paths.devJs.dest))
+  .pipe(browserSync.reload({ stream: true })));
 
-gulp.task('libJs', () => src([ // Берем все необходимые библиотеки
-  'app/libs/jquery/dist/jquery.min.js', // Берем jQuery
-  'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js', // Берем Magnific Popup
-  'app/libs/slick-carousel/slick/slick.min.js',
-])
+gulp.task('libJs', () => src(paths.libJs.src)
   .pipe(map.init())
   .pipe(uglify())
   .pipe(concat('libs.min.js'))
-  .pipe(map.write('../sourcemaps'))
-  .pipe(dest('docs/js/'))
-  .pipe(browserSync.reload({ stream: true }))); // обновляем браузер
+  .pipe(map.write(paths.map))
+  .pipe(dest(paths.libJs.dest))
+  .pipe(browserSync.reload({ stream: true })));
 
-gulp.task('buildJs', () => src([
-  'app/components/**/*.js',
-  'app/js/01_main.js',
-])
+gulp.task('buildJs', () => src(paths.devJs.src)
   //.pipe(uglify())
   .pipe(babel({
     presets: ['@babel/env'],
   }))
   .pipe(concat('main.min.js'))
-  .pipe(dest('docs/js/'))
-  .pipe(browserSync.reload({ stream: true }))); // обновляем браузер
+  .pipe(dest(paths.devJs.dest))
+  .pipe(browserSync.reload({ stream: true })));
 
 // Обработка HTML
-gulp.task('html', () => src(['app/**/*.html', '!app/components/**/*.html']) // собираем файлы для отслеживания
+gulp.task('html', () => src(paths.html.src) // собираем файлы для отслеживания
   .pipe(include({
-    basepath: 'app/components/',
+    basepath: paths.html.basepath,
   }))
-  .pipe(dest('docs'))
-  .pipe(browserSync.reload({ stream: true }))); // обновляем браузер
+  .pipe(dest(paths.html.dest))
+  .pipe(browserSync.reload({ stream: true })));
 
 // Обработка PHP
-gulp.task('php', () => src('app/**/*.php')
+gulp.task('php', () => src(paths.php.src)
   .pipe(include({
-    basepath: 'app/components/',
+    basepath: paths.php.basepath,
   }))
-  .pipe(dest('docs'))
-  .pipe(browserSync.reload({ stream: true }))); // обновляем браузер
+  .pipe(dest(paths.php.dest))
+  .pipe(browserSync.reload({ stream: true })));
 
 // Обработка растровых изображений - delete
 gulp.task('img', () => src('app/img/**/*') // Берем все изображения из app
@@ -168,9 +196,9 @@ gulp.task('img', () => src('app/img/**/*') // Берем все изображе
   })))
   .pipe(dest('docs/img'))); // Выгружаем в продакшен
 
-gulp.task('rastr', () => src('app/img/**/*.+(png|jpg|jpeg|gif|svg|ico)')
+gulp.task('rastr', () => src(paths.img.srcRastr)
   .pipe(plumber())
-  .pipe(changed('docs/img'))
+  .pipe(changed(paths.img.changed))
   .pipe(imagemin(
     {
       interlaced: true,
@@ -194,19 +222,19 @@ gulp.task('rastr', () => src('app/img/**/*.+(png|jpg|jpeg|gif|svg|ico)')
       // imagemin.svgo(),
     ],
   ))
-  .pipe(dest('docs/img'))
-  .pipe(browserSync.reload({ stream: true }))); // обновляем браузер
+  .pipe(dest(paths.img.dest))
+  .pipe(browserSync.reload({ stream: true })));
 
-gulp.task('webp', () => src('docs/img/**/*.+(png|jpg|jpeg)')
+gulp.task('webp', () => src(paths.img.srcWebp)
   .pipe(plumber())
-  .pipe(changed('docs/img', {
+  .pipe(changed(paths.img.changed, {
     extension: '.webp',
   }))
   .pipe(webpConv())
-  .pipe(multiDest(['app/img', 'docs/img']))
+  .pipe(multiDest(paths.img.multiDest))
   .pipe(browserSync.reload({ stream: true }))); // обновляем браузер
 
-gulp.task('svgcss', () => src('app/svg/css/**/*.svg')
+gulp.task('svgcss', () => src(paths.svg.src)
   .pipe(svgmin({
     plugins: [{
       removeComments: true,
@@ -222,9 +250,9 @@ gulp.task('svgcss', () => src('app/svg/css/**/*.svg')
     cssPrefix: '--svg__',
     addSize: false,
   }))
-  .pipe(dest('app/scss/global')));
+  .pipe(dest(paths.svg.dest)));
 
-gulp.task('svgsprite', () => src('app/svg/**/*.svg') // More: https://habr.com/ru/post/560894/
+gulp.task('svgsprite', () => src(paths.svg.spriteSrc) // More: https://habr.com/ru/post/560894/
   .pipe(svgmin({
     plugins: [{
       removeComments: true,
@@ -237,11 +265,11 @@ gulp.task('svgsprite', () => src('app/svg/**/*.svg') // More: https://habr.com/r
   .pipe(sprite({
     mode: {
       stack: {
-        sprite: '../sprite.svg',
+        sprite: paths.svg.sprite,
       },
     },
   }))
-  .pipe(dest('app/img')));
+  .pipe(dest(paths.svg.spriteDest)));
 
 gulp.task('ttf', (done) => {
   src('app/fonts/**/*.ttf')
@@ -263,8 +291,8 @@ gulp.task('ttf', (done) => {
   done();
 });
 
-let srcFonts = 'src/scss/_local-fonts.scss';
-let appFonts = 'build/fonts/';
+const srcFonts = 'src/scss/_local-fonts.scss';
+const appFonts = 'build/fonts/';
 
 gulp.task('fonts', (done) => { // https://habr.com/ru/post/560894/
   fs.writeFile(srcFonts, '', () => {});

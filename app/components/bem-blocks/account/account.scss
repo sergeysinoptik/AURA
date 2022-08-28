@@ -218,6 +218,7 @@ ul.tabs li:hover:before {
     justify-content: end;
   }
   .product-credits__add-to-cart {
+    width: fit-content;
     align-self: end;
     visibility: hidden;
   }

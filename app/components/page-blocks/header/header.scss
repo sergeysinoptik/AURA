@@ -7,6 +7,9 @@
   }
   .menu {
     row-gap: 24px;
+    position: relative;
+    flex-grow: 1;
+    margin-right: 40px;
   }
   .search {
     column-gap: 12px;
@@ -51,6 +54,7 @@
   top: 0;
   z-index: 1000;
   transition: all 0.5s;
+  max-height: 80px;
   .inner {
     padding: 24px 40px;
     align-items: center;
@@ -62,6 +66,8 @@
   }
   .menu {
     row-gap: 0;
+    margin-right: 0;
+    margin-left: calc(80px - 53px);
   }
   .search {
     visibility: hidden;

@@ -1,5 +1,5 @@
 <div class="cart-block bg bg_grey">
-  <div class="width">
+  <div class="width width-1440">
     <div class="wrapper flex">
       <div class="cart-block-products flex --dir-column --a-stretch">
         <div
@@ -207,7 +207,10 @@
             <div
               class="popup-cart__footer-buttons flex --dir-column --a-stretch"
             >
-              @@include('bem-blocks/btn/btn.html', { "mod":"btn_color_green btn_size_m btn_width_max", "text":"Купить" })
+              @@include('bem-blocks/btn/btn.html', { 
+                "mod":"btn_color_green btn_h_64 btn_font_18 btn_w_max", 
+                "text":"Купить" 
+              })
             </div>
             <p class="after-cart-result">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -216,10 +219,10 @@
           </div>
         </div>
         <div class="cart-block-delivery bg bg_white">
-          <div class="accodion-body">
-            <div class="single-acco">
+          <div class="accordion">
+            <div class="accordion-item">
               <h2>Условия покупки и возврата<span>+</span></h2>
-              <div class="accodion-body">
+              <div class="accordion-item__body">
                 <h5>ВОЗВРАЩЕНИЕ</h5>
                 <p>Заказ можно вернуть двумя способами:</p>
 

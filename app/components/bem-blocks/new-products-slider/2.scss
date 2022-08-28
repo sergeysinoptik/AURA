@@ -1,4 +1,5 @@
-.new-p {
+.products-slider-block {
+  padding: 64px 88px;
   h2 {
     font-family: "Noto Sans";
     font-style: normal;
@@ -6,15 +7,11 @@
     font-size: 32px;
     line-height: 140%;
     color: #4e4e4e;
-    padding: 64px 0 24px 88px;
+    padding-bottom: 24px;
   }
 }
 
-.slider {
-  padding-bottom: 64px;
-}
-
-.slider > .slick-list {
+.products-slider > .slick-list {
   padding: 0 12% 0 0 !important;
 }
 
@@ -29,8 +26,8 @@
   text-align: center;
 }
 
-.slider {
-  max-width: 1264px;
+.products-slider {
+  max-width: 100%;
   margin: 0 auto;
   background: #fff;
   & > .slick-next,
