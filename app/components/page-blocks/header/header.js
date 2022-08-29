@@ -5,7 +5,7 @@ const body = document.querySelector('body');
 const searchBtn = document.querySelector('#scroll-search');
 
 window.addEventListener('scroll', () => {
-  if (body.scrollTop > 0) {
+  if (window.pageYOffset > 0) {
     header.classList.add('sticky');
     searchBtn.classList.remove('hidden');
   } else {

@@ -3,7 +3,7 @@ window.addEventListener('scroll', () => {
   const body = document.querySelector('body');
   const filters = document.querySelector('.topbar-filter');
   if (filters) {
-    if (body.scrollTop > 85) {
+    if (window.pageYOffset > 85) {
       filters.classList.add('topbar-filter_sticky');
       filters.classList.remove('bg_grey');
       filters.classList.add('bg_white');

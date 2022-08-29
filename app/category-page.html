@@ -9,7 +9,6 @@
 <body>
   <div class="flex --dir-column">
     @@include('page-blocks/header/header.html')
-    @@include('bem-blocks/side-bar-nav/side-bar-nav.html')
     <main class="main">
       @@include('bem-blocks/topbar/topbar.html', {
         "ifBreadcrumps":"@@include('bem-blocks/breadcrumps/breadcrumps.html')",
@@ -25,6 +24,7 @@
       @@include('bem-blocks/new-products-slider/2.html')
     </main>
     @@include('page-blocks/footer/footer.html')
+    @@include('bem-blocks/side-bar-nav/side-bar-nav.html')
     @@include('page-blocks/footer/scripts.html')
   </div>
 </body>
