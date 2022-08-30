@@ -1,8 +1,10 @@
 <div class="product-description flex --dir-column --a-center">
-  <div class="product-description__img">
-    <a class="zoom" href="./img/single-product-main-zoom-1.webp">
-      <img src="./img/single-product-main.webp" alt="">
-    </a>
+  <div class="product-description__img product-description__img-ratio">
+    <div class="product-description__img-ratio-inner" style="background:url(./img/single-product-main.webp) center center no-repeat; background-size:cover;" >
+      <div class="product-description__img-ratio-content">
+        <a href="./img/single-product-main-zoom-1.webp" class="zoom"></a>
+      </div>
+    </div>
   </div>
   <div class="product-description__text flex --dir-column">
     <h3>Описание товара</h3>
@@ -10,11 +12,15 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
   </div>
   <div class="product-description__gallery flex">
-    <a class="zoom" href="./img/single-product-gallery-1.webp">
-      <img src="./img/single-product-gallery-1.webp" alt="">
-    </a>
-    <a class="zoom" href="./img/single-product-gallery-2.webp">
-      <img src="./img/single-product-gallery-2.webp" alt="">
-    </a>
+    <div class="product-description__gallery-ratio">
+      <div class="product-description__gallery-ratio-inner" style="background:url(./img/single-product-gallery-1.webp) center center no-repeat; background-size:cover;" >
+        <a href="./img/single-product-gallery-1.webp" class="zoom product-description__gallery-ratio-content"></a>
+      </div>
+    </div>
+    <div class="product-description__gallery-ratio">
+      <div class="product-description__gallery-ratio-inner" style="background:url(./img/single-product-gallery-2.webp) center center no-repeat; background-size:cover;" >
+        <a href="./img/single-product-gallery-2.webp" class="zoom product-description__gallery-ratio-content"></a>
+      </div>
+    </div>
   </div>
 </div>
