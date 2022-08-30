@@ -3,17 +3,19 @@
 }
 
 .loop-grid {
-  grid-template-columns: repeat(4, 24.1%);
+  grid-template-columns: repeat(4,24.3%);
   display: grid;
-  column-gap: 16px;
+  -webkit-column-gap: 0.93%;
+  -moz-column-gap: 0.93%;
+  column-gap: 0.93%;
   row-gap: 16px;
   padding: 0 16px;
 }
 
 .loop-grid_columns_3 {
-  grid-template-columns: repeat(3, 32.55%) !important;
+  grid-template-columns: repeat(3, 32.7%) !important;
 }
 
 .loop-grid_columns_4 {
-  grid-template-columns: repeat(4, 24.1%);
+  grid-template-columns: repeat(4,24.3%);
 }

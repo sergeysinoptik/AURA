@@ -1,3 +1,29 @@
 .slider-product-card {
   margin: 0;
 }
+
+.product-card-slide-bg {
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+.product-card-slider-ratio {
+  width: 100%;
+}
+
+.product-card-slider-ratio-inner {
+  position: relative;
+  height: 0;
+  border: none;
+  padding-top: 102.058%;
+}
+
+.product-card-slider-ratio-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: transparent;
+}
