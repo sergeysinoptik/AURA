@@ -21,7 +21,10 @@
         "color":"grey"
       })
       @@include('bem-blocks/account/account.html')
-      @@include('bem-blocks/new-products-slider/2.html')
+      @@include('bem-blocks/related-products-slider/related-products-slider.html', {
+        "bgMod":"bg_white",
+        "h2text":"Ранее просмотренные",
+      })
     </main>
     @@include('page-blocks/footer/footer.html')
     @@include('page-blocks/footer/scripts.html')

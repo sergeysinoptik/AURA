@@ -29,7 +29,10 @@
         "item3":"название товара",
         "color":"white"
       })
-      @@include('bem-blocks/new-products-slider/2.html')
+      @@include('bem-blocks/related-products-slider/related-products-slider.html', {
+        "bgMod":"bg_white",
+        "h2text":"Ранее просмотренные",
+      })
       @@include('bem-blocks/side-popup/side-popup.html')
     </main>
     @@include('page-blocks/footer/footer.html')

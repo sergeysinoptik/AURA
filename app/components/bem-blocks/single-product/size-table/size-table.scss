@@ -75,7 +75,9 @@
 .quantity-selects {
   display: none;
   &.enable {
-    display: block;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
   }
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {

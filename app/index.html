@@ -14,8 +14,10 @@
         @@include('bem-blocks/promo/promo.html')
         @@include('bem-blocks/collections/collections.html')
         @@include('bem-blocks/call-to-action/call-to-action.html')
-        <!--@@include('bem-blocks/new-products-slider/new-products-slider.html')-->
-        @@include('bem-blocks/new-products-slider/2.html')
+        @@include('bem-blocks/related-products-slider/related-products-slider.html', {
+          "bgMod":"bg_white",
+          "h2text":"Новые поступления",
+        })
     </main>
     @@include('page-blocks/footer/footer.html')
     @@include('page-blocks/footer/scripts.html')
