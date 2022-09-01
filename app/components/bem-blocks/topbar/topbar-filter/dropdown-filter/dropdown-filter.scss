@@ -33,3 +33,17 @@
   width: 284px;
   display: none;
 }
+
+
+@media screen and (max-width: 767px) {
+  .dropdown {
+    position: inherit;
+    span {
+      font-size: 12px;
+    }
+  }
+  .dropdown-ul {
+   margin-top: 8px;
+   width: calc(100vw - 38px);
+  }
+}

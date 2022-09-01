@@ -12,3 +12,10 @@
     margin: 20px;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .fixed-chat {
+    max-width: 72px;
+    max-height: 72px;
+  }
+}

@@ -8,3 +8,9 @@
 .dropdown_active ~ .dropdown-ul {
   display: block;
 }
+
+@media screen and (max-width: 767px) {
+  .dropdown_active ~ .dropdown-ul {
+    left: 0;
+  }
+}

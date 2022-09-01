@@ -94,7 +94,8 @@
 
 @media screen and (max-width: 767px) {
   .header {
-    display: none;
+    display: none !important;
+    visibility: hidden !important;
   }
   .header-mob {
     display: block;
@@ -121,7 +122,7 @@
       order: 2;
       width: 49px;
       height: 30px;
-      margin: 0 54px;
+      margin: 0 5vw;
     }
     .menu-mob .mm:nth-child(n+3) {
       order: 3;

@@ -8,3 +8,10 @@
   color: var(--main-grey);
   padding-top: 39px;
 }
+
+@media screen and (max-width: 767px) {
+  .breadcrumps {
+    padding: 15px 0 3px;
+    font-size: 10px;
+  }
+}

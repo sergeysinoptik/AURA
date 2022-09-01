@@ -14,3 +14,12 @@
   object-fit: cover;
   object-position: center center;
 } */
+
+
+@media screen and (max-width: 767px) {
+  .product-card__images {
+    .add-to-cart {
+      opacity: 1;
+    }
+  }
+}
