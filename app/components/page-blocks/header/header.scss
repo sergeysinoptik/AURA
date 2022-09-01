@@ -87,3 +87,44 @@
   visibility: visible !important;
   margin-bottom: -15px;
 }
+
+.header-mob {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    display: none;
+  }
+  .header-mob {
+    display: block;
+    position: fixed;
+    z-index: 50;
+    border-bottom: 1px solid #d9d9d9;
+    .inner {
+      min-width: 100vw;
+      width: 100vw;
+      padding: 13px 16px;
+      column-gap: 32px;
+    }
+    .logo {
+      display: inline-block;
+    }
+    .menu-mob .mm {
+      display: inline-block;
+      align-self: center;
+    }
+    .menu-mob {
+      display: contents;
+    }
+    .logo {
+      order: 2;
+      width: 49px;
+      height: 30px;
+      margin: 0 54px;
+    }
+    .menu-mob .mm:nth-child(n+3) {
+      order: 3;
+    }
+  }
+}

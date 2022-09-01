@@ -28,3 +28,16 @@
     }
   }
 }
+
+@media screen and (max-width: 767px) {
+  .collection {
+    width: 100%;
+    row-gap: 24px;
+    &:last-child {
+      display: none;
+    }
+    &__link {
+      font-size: 20px;
+    }
+  }
+}

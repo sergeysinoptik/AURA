@@ -10,3 +10,9 @@
     }
   }
 }
+
+@media screen and (max-width: 767px) {
+  .slider_arrows_hover .slick-arrow {
+    visibility: visible;
+  }
+}

@@ -1,3 +1,15 @@
 .collections__wrapper {
   padding: 56px 89px 67px;
 }
+
+@media screen and (max-width: 767px) {
+  .collections {
+    &__wrapper {
+      padding: 16px 16px 32px;
+    }
+    &__inner {
+      flex-direction: column;
+      row-gap: 24px;
+    }
+  }  
+}

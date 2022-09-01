@@ -9,6 +9,15 @@ const productsSliderSettings = {
   infinite: false,
   // centerMode: false,
   // centerPadding: '60px',
+  responsive: [
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+        infinite: true,
+      },
+    },
+  ],
 };
 
 function setSlideVisibility() {

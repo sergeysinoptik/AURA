@@ -27,3 +27,12 @@
   left: 0;
   background: transparent;
 }
+
+@media screen and (max-width: 767px) {
+  .collection-slider {
+    margin-bottom: 0;
+  }
+  .collection-slider-ratio-inner {
+    padding-top: 72.9659685864%;
+  }
+}

@@ -21,3 +21,19 @@
     }
   }
 }
+
+@media screen and (max-width: 767px) {
+  .main-slider {
+    height: 587px;
+    .slider-item {
+      height: 587px;
+      a.item__text {
+        width: 100%;
+        padding: 0 16px;
+        h1 {
+          font-size: 64px;
+        }
+      }
+    }
+  }
+}
