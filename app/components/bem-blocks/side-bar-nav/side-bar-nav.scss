@@ -172,8 +172,17 @@
 @media screen and (max-width: 767px) {
   #sticky-side {
     height: 100vh;
+    top: 0;
+    transform: none;
   }
   #side-box {
     height: 90vh;
+    overscroll-behavior: contain;
+  }
+  .contact-btn {
+    height: 27px;
+    width: 200px;
+    transform: translatex(-87px) rotate(90deg);
+    background: url("../img/side-bar-nav-mob.svg") center center no-repeat;
   }
 }

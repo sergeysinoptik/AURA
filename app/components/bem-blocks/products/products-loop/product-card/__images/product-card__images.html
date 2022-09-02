@@ -2,9 +2,16 @@
   @@include('bem-blocks/products/products-loop/product-card/product-card-slider/product-card-slider.html', {
     "modificator":"@@modificator"
   })
-  @@include('bem-blocks/add-to-cart/add-to-cart.html', {
-    "modificator":"",
-    "btnMod":"",
-    "text":"Добавить в корзину"
-  })
+  <div class="show-popup-btn" data-target="product-popup-@@num">
+    @@include('bem-blocks/add-to-cart/add-to-cart.html', {
+        "modificator":"",
+        "btnMod":"",
+        "text":"Добавить в корзину"
+      })
+  </div>
+  <div class="product-popup bg bg_white" id="product-popup-@@num">
+    <div class="product-credits__size-table">
+      @@include('bem-blocks/single-product/size-table/size-table.html')
+    </div>
+  </div>
 </div>
