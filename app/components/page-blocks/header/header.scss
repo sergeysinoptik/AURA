@@ -106,8 +106,8 @@
     .inner {
       min-width: 100vw;
       width: 100vw;
-      padding: 0 16px;
-      column-gap: 2px;
+      padding: 0;
+      column-gap: 0;
       align-items: center;
       min-height: 56px;
     }
@@ -115,16 +115,14 @@
       display: inline-block;
     }
     .menu-mob .mm {
-      display: inline-block;
+      display: inline-flex;
       align-self: center;
       padding: 13px 16px;
       min-height: 56px;
       cursor: pointer;
-      &:first-child {
-        padding: 13px 16px 13px 0;
-      }
-      &:last-child {
-        padding: 13px 0 13px 16px;
+      .icon {
+        display: flex;
+        align-items: center;
       }
     }
     .menu-mob {
@@ -134,7 +132,9 @@
       order: 2;
       width: 49px;
       height: 30px;
-      margin: 0 5vw;
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
     }
     .menu-mob .mm:nth-child(n+3) {
       order: 3;

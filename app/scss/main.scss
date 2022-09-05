@@ -81,6 +81,13 @@ body {
   &_grey {
     background: var(--soft-grey-bg);
   }
+  &_green {
+    background: var(--green);
+    svg,
+    path {
+      fill: #ffffff !important;
+    }
+  }
 }
 
 .width {
