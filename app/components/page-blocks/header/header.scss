@@ -102,11 +102,14 @@
     position: fixed;
     z-index: 50;
     border-bottom: 1px solid #d9d9d9;
+    min-height: 56px;
     .inner {
       min-width: 100vw;
       width: 100vw;
-      padding: 13px 16px;
-      column-gap: 32px;
+      padding: 0 16px;
+      column-gap: 2px;
+      align-items: center;
+      min-height: 56px;
     }
     .logo {
       display: inline-block;
@@ -114,6 +117,15 @@
     .menu-mob .mm {
       display: inline-block;
       align-self: center;
+      padding: 13px 16px;
+      min-height: 56px;
+      cursor: pointer;
+      &:first-child {
+        padding: 13px 16px 13px 0;
+      }
+      &:last-child {
+        padding: 13px 0 13px 16px;
+      }
     }
     .menu-mob {
       display: contents;
