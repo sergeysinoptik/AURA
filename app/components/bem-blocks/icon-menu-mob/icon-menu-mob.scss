@@ -12,11 +12,12 @@
     column-gap: 16px;
     max-height: 55px;
     padding: 0 16px;
+    position: relative;
     .mobile-nav-wishlist,
     .mobile-nav-account {
       width: 50%;
       border-radius: 8px;
-      a {
+      & > a {
         display: inline-flex;
         align-items: center;
         column-gap: 12px;
@@ -52,6 +53,24 @@
           background: url(../img/icon-account.svg) center center no-repeat;
           background-size: contain;
         }
+      }
+      .user-dropdown {
+        left: 0;
+        bottom: 75px;
+        top: inherit;
+        width: 100vw;
+        &__content {
+          button {
+            width: 100%;
+          }
+        }
+      }
+      .user-dropdown::before {
+        right: 25%;
+        top: inherit;
+        bottom: -30px;
+        border: 10px solid transparent;
+        border-top: 20px solid #fff;
       }
     }
   }
