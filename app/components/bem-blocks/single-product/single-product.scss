@@ -10,13 +10,18 @@
 }
 
 @media screen and (max-width: 767px) {
-  .single-product,
-  .topbar,
-  .products-slider-block,
-  .footer,
-  .fixed-chat {
-    display: none !important;
+  .single-product-main {
+    .single-product,
+    .topbar,
+    .products-slider-block {
+      display: none !important;
+    }
+    & ~ .footer,
+    & ~ .fixed-chat {
+      display: none !important;
+    }
   }
+  
   .single-product-mob {
     display: block;
   }
