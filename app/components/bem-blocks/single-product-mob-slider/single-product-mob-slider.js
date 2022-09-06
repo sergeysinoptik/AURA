@@ -1,3 +1,4 @@
+/* global $ */
 $('.mobile-slider').slick({
   slidesToScroll: 1,
   arrows: false,
