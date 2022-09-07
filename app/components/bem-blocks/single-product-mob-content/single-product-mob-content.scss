@@ -21,10 +21,12 @@
     &_active {
       position: absolute;
       height: fit-content;
+      max-height: calc(100vh - 100px);
       bottom: 0;
       transition: height 1s;
       & .single-product-mob-description {
         display: block;
+        overflow-block: auto;
         &::before {
           display: none;
         }
