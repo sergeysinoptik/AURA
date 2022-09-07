@@ -22,7 +22,7 @@ $(function() {
       if (phase === $.fn.swipe.phases.PHASE_END) {
  
         //Если сдвигаем меню влево и сдвинули более 100px
-        if (direction == 'up' && distance > 100) {
+        if (direction == 'up' && distance > 50) {
  
           //Убираем классы у body
           $productMobContent.addClass('single-product-mob-content_active');
@@ -32,7 +32,7 @@ $(function() {
             $menu.css('transform', 'translateX(0)');
           }, 500);
         }
-        if (direction == 'down' && distance > 100) {
+        if (direction == 'down' && distance > 50) {
  
           //Убираем классы у body
           $productMobContent.removeClass('single-product-mob-content_active');
