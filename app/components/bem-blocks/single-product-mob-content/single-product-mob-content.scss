@@ -16,11 +16,15 @@
     bottom: 0;
     width: 100vw;
     overflow: hidden;
+    max-height: fit-content;
     &_active {
       position: absolute;
       height: fit-content;
       bottom: 0;
       transition: height 1s;
+      & .single-product-mob-description::before {
+        display: none;
+      }
     }
   }
   .single-product-mob-name {
@@ -63,7 +67,7 @@
     padding: 18px 26px;
     align-self: stretch;
     overflow-block: hidden;
-    overflow-x: hidden;
+    overflow: hidden;
     //border: 18px solid;
     //border-left: 26px solid;
     //border-right: 26px solid;
