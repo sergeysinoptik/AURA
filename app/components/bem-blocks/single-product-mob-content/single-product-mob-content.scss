@@ -22,8 +22,11 @@
       height: fit-content;
       bottom: 0;
       transition: height 1s;
-      & .single-product-mob-description::before {
-        display: none;
+      & .single-product-mob-description {
+        display: block;
+        &::before {
+          display: none;
+        }
       }
     }
   }
@@ -62,6 +65,7 @@
     column-gap: 16px;
   }
   .single-product-mob-description {
+    display: none;
     flex: 1 1 calc(100% - 232px);
     min-height: calc(100% - 232px);
     padding: 18px 26px;
