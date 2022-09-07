@@ -67,6 +67,7 @@ const paths = {
       'app/libs/jquery/dist/jquery.min.js',
       'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
       'app/libs/slick-carousel/slick/slick.min.js',
+      'app/libs/jquery-touchswipe/jquery.touchSwipe.js',
     ],
     dest: 'docs/js/',
   },

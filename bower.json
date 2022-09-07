@@ -18,6 +18,7 @@
   "dependencies": {
     "jquery-3.6.0.min": "https://code.jquery.com/jquery-3.6.0.min.js",
     "magnific-popup": "^1.1.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "jquery-touchswipe": "^1.6.19"
   }
 }
