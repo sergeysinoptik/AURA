@@ -28,6 +28,7 @@
     overflow-y: hidden;
     .product__wrapper {
       height: calc(100vh - 58px);
+      overflow: hidden;
     }
   }
   .product__wrapper {
