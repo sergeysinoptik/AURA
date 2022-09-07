@@ -1,5 +1,5 @@
 const setHeight = () => {
-  document.querySelector("body").style.minHeight = window.innerHeight + "px"
+  document.querySelector("html").style.minHeight = window.innerHeight + "px"
 };
 
 // define mobile screen size:
