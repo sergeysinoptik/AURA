@@ -11,11 +11,17 @@
 }
 
 @media screen and (max-width: 767px) {
-  .single-product-body,
-  .single-product-flex {
+  html {
+    height: fill-available;
+    height: -webkit-fill-available;
+  }
+  .single-product-body {
     overflow: hidden;
     max-height: 100vh;
     height: 100vh;
+    min-height: 100vh;
+    min-height: fill-available;
+    min-height: -webkit-fill-available;
   }
   .single-product-main {
     overflow: hidden;
