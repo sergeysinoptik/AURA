@@ -10,6 +10,8 @@
   a {
     display: block;
     margin: 20px;
+    height: 32px;
+    width: 32px;
   }
 }
 
@@ -17,5 +19,7 @@
   .fixed-chat {
     max-width: 72px;
     max-height: 72px;
+    bottom: 24px;
+    right: 12px;
   }
 }

@@ -50,6 +50,9 @@
   .single-product-mob-credits {
     align-self: stretch;
     padding: 0 10px;
+    .color-panel {
+      padding: 0 !important;
+    }
   }
   .single-product-mob-credits__vendorcode {
     font-family: "Noto Sans";
@@ -58,9 +61,6 @@
     font-size: 10px;
     line-height: 140%;
     color: #000000;
-  }
-  .color-panel {
-    padding: 0 !important;
   }
   .single-product-mob-credits__icons {
     column-gap: 16px;
