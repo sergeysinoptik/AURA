@@ -48,7 +48,7 @@ $(function() {
     },
     threshold: 0
   });
-  $('..single-product-mob-name').swipe({
+  $('.single-product-mob-name').swipe({
     swipeStatus: function(event, phase, direction, distance , duration , fingerCount) {
       console.log(direction)
       //Премещаем меню на проведенное расстояние
