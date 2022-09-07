@@ -12,18 +12,22 @@
     margin-top: -10px;
     background: #fff;
     z-index: 999;
-    position: absolute;
-    bottom: 0;
+    //position: absolute;
+    //bottom: 0;
     width: 100vw;
     overflow: hidden;
     max-height: fit-content;
     height: fit-content;
+    position: sticky;
+    bottom: 0;
     &_active {
-      position: absolute;
+      //position: absolute;
       height: fit-content;
       max-height: calc(100vh - 100px);
-      bottom: 0;
+      //bottom: 0;
       transition: all 1s;
+      position: sticky;
+      bottom: 0;
       & .single-product-mob-description {
         display: block;
         overflow-block: auto;
