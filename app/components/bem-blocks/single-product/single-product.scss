@@ -11,7 +11,8 @@
 }
 
 @media screen and (max-width: 767px) {
-  .single-product-body {
+  .single-product-body,
+  .single-product-flex {
     overflow: hidden;
     max-height: 100vh;
     height: 100vh;
