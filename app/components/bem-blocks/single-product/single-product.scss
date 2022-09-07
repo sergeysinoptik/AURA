@@ -25,6 +25,7 @@
   
   .single-product-mob {
     display: block;
+    overflow-y: hidden;
     .product__wrapper {
       height: calc(100vh - 58px);
     }
