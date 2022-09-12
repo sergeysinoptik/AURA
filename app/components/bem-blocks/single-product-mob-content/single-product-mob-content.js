@@ -6,10 +6,20 @@ const setHeight = () => {
   // html.style.height = window.innerHeight + "px";
   // html.style.maxHeight = window.innerHeight + "px";
   if (singleProductMob) {
+    const singleProductFlex = document.querySelector('.single-product-flex');
     const productWrapper = singleProductMob.querySelector('.product__wrapper');
     html.style.minHeight = `${window.innerHeight}px`;
+    html.style.height = `${window.innerHeight}px`;
+    html.style.maxHeight = `${window.innerHeight}px`;
+    singleProductFlex.style.minHeight = `${window.innerHeight - 58}px)`;
+    singleProductFlex.style.height = `${window.innerHeight - 58}px)`;
+    singleProductFlex.style.maxHeight = `${window.innerHeight - 58}px)`;
     singleProductMob.style.minHeight = `${window.innerHeight - 58}px)`;
+    singleProductMob.style.height = `${window.innerHeight - 58}px)`;
+    singleProductMob.style.maxHeight = `${window.innerHeight - 58}px)`;
     productWrapper.style.minHeight = `${window.innerHeight - 58}px)`;
+    productWrapper.style.height = `${window.innerHeight - 58}px)`;
+    productWrapper.style.maxHeight = `${window.innerHeight - 58}px)`;
     console.log(window.innerHeight, 'window.innerHeight');
   }
 };
