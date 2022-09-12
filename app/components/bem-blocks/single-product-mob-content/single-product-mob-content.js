@@ -2,11 +2,11 @@
 const setHeight = () => {
   const html = document.querySelector('html');
   const singleProductMob = document.querySelector('.single-product-mob');
-  const productWrapper = singleProductMob.querySelector('.product__wrapper');
 
   // html.style.height = window.innerHeight + "px";
   // html.style.maxHeight = window.innerHeight + "px";
   if (singleProductMob) {
+    const productWrapper = singleProductMob.querySelector('.product__wrapper');
     html.style.minHeight = `${window.innerHeight}px`;
     singleProductMob.style.minHeight = `${window.innerHeight - 58}px)`;
     productWrapper.style.minHeight = `${window.innerHeight - 58}px)`;
