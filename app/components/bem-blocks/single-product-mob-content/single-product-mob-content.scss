@@ -31,10 +31,11 @@
       & .single-product-mob-description {
         //display: block;
         overflow-block: auto;
+        overflow: auto;
         visibility: visible;
         padding: 18px 26px;
         max-height: inherit;
-        transition: all 1s;
+        transition: max-height visibility 1s;
         &::before {
           display: none;
         }
@@ -97,6 +98,7 @@
     //border-left: 26px solid transparent;
     //border-right: 26px solid transparent;
     position: relative;
+    transition: max-height visibility 1s;
     cursor: pointer;
     &:before {
       content: "";
