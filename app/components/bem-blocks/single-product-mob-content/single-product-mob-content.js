@@ -1,19 +1,24 @@
+/* global window, document */
 const setHeight = () => {
-  document.querySelector("html").style.minHeight = window.innerHeight + "px"
+  const html = document.querySelector('html');
+  const singleProductMob = document.querySelector('.single-product-mob');
+  const productWrapper = singleProductMob.querySelector('.product__wrapper');
+  html.style.minHeight = `${window.innerHeight}px`;
+  // html.style.height = window.innerHeight + "px";
+  // html.style.maxHeight = window.innerHeight + "px";
+  singleProductMob.style.minHeight = `calc(${window.innerHeight}px - 58px)`;
+  productWrapper.style.minHeight = `calc(${window.innerHeight}px - 58px)`;
   console.log(window.innerHeight, 'window.innerHeight');
 };
 
 // define mobile screen size:
 
-let deviceWidth = window.matchMedia("(max-width: 1024px)");
+const deviceWidth = window.matchMedia('(max-width: 1024px)');
 
 if (deviceWidth.matches) {
 // set an event listener that detects when innerHeight changes:
-
-  window.addEventListener("resize", setHeight);
-
-// call the function once to set initial height:
-
+  window.addEventListener('resize', setHeight);
+  // call the function once to set initial height:
   setHeight();
 }
 
