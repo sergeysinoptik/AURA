@@ -29,8 +29,12 @@
       position: sticky;
       bottom: 0;
       & .single-product-mob-description {
-        display: block;
+        //display: block;
         overflow-block: auto;
+        visibility: visible;
+        padding: 18px 26px;
+        max-height: inherit;
+        transition: all 1s;
         &::before {
           display: none;
         }
@@ -73,13 +77,17 @@
     column-gap: 16px;
   }
   .single-product-mob-description {
-    display: none;
+    //display: none;
     flex: 1 1 calc(100% - 232px);
     min-height: calc(100% - 232px);
-    padding: 18px 26px;
+    //padding: 18px 26px;
     align-self: stretch;
     overflow-block: hidden;
     overflow: hidden;
+
+    padding: 0;
+    visibility: hidden;
+    max-height: 0px;
     //border: 18px solid;
     //border-left: 26px solid;
     //border-right: 26px solid;

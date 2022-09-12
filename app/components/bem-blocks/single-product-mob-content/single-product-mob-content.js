@@ -1,4 +1,4 @@
-/* global window, document */
+/* global window, document, $, jQuery */
 const setHeight = () => {
   const html = document.querySelector('html');
   const singleProductMob = document.querySelector('.single-product-mob');
@@ -6,8 +6,8 @@ const setHeight = () => {
   html.style.minHeight = `${window.innerHeight}px`;
   // html.style.height = window.innerHeight + "px";
   // html.style.maxHeight = window.innerHeight + "px";
-  singleProductMob.style.minHeight = `calc(${window.innerHeight}px - 58px)`;
-  productWrapper.style.minHeight = `calc(${window.innerHeight}px - 58px)`;
+  singleProductMob.style.minHeight = `${window.innerHeight - 58}px)`;
+  productWrapper.style.minHeight = `${window.innerHeight - 58}px)`;
   console.log(window.innerHeight, 'window.innerHeight');
 };
 
@@ -28,23 +28,21 @@ jQuery(document).ready(() => {
   });
 });
 
+$(() => {
+  // Создаем переменные
+  const $productMobContent = $('.single-product-mob-content');
+  const swipeIcon = $('.swipe-icon');
+  const productName = $('.single-product-mob-name');
+  const $body = $('body');
 
-$(function() {
-	 
-  //Создаем переменные
-  var $productMobContent = $('.single-product-mob-content');
-  var swipeIcon = $('.swipe-icon');
-  var productName = $('.single-product-mob-name');
-  var $body = $('body');
- 
-  //Закрытие меню свайпом
+  // Закрытие меню свайпом
   $('.swipe-icon').swipe({
     swipeStatus: function(event, phase, direction, distance , duration , fingerCount) {
-      console.log(direction)
-      //Премещаем меню на проведенное расстояние
-      //$productMobContent.removeClass('single-product-mob-content_active');
+      console.log(direction);
+      // Премещаем меню на проведенное расстояние
+      // $productMobContent.removeClass('single-product-mob-content_active');
  
-      //Если отпустили палец, то проводим следующее:
+      // Если отпустили палец, то проводим следующее:
       if (phase === $.fn.swipe.phases.PHASE_END) {
  
         //Если сдвигаем меню влево и сдвинули более 100px
@@ -106,5 +104,4 @@ $(function() {
     },
     threshold: 0
   });
-  
 });
