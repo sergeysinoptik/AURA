@@ -1,5 +1,5 @@
 [
-  { "link": "#", "name": "Женщины" },
-  { "link": "#", "name": "Мужчины" },
-  { "link": "#", "name": "Дети" }
+  { "link": "category-page-clothe.html", "name": "Женщины" },
+  { "link": "category-page-clothe.html", "name": "Мужчины" },
+  { "link": "category-page-clothe.html", "name": "Дети" }
 ]

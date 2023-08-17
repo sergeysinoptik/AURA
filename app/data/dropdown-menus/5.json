@@ -1,7 +1,7 @@
 [
-  { "link": "#", "name": "Полотенца" },
-  { "link": "#", "name": "Халаты и тапочки" },
-  { "link": "#", "name": "Коврики в ванной" },
-  { "link": "#", "name": "Натуральная косметика" },
-  { "link": "#", "name": "Аксессуары" }
+  { "link": "category-page.html", "name": "Полотенца" },
+  { "link": "category-page.html", "name": "Халаты и тапочки" },
+  { "link": "category-page.html", "name": "Коврики в ванной" },
+  { "link": "category-page.html", "name": "Натуральная косметика" },
+  { "link": "category-page.html", "name": "Аксессуары" }
 ]

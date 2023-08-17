@@ -1,8 +1,8 @@
 [
-  { "link": "#", "name": "Сервировка" },
-  { "link": "#", "name": "Кофе и чай" },
-  { "link": "#", "name": "Столовые приборы" },
-  { "link": "#", "name": "Изделия из стекла" },
-  { "link": "#", "name": "Текстиль" },
-  { "link": "#", "name": "Аксессуары для стола" }
+  { "link": "category-page.html", "name": "Сервировка" },
+  { "link": "category-page.html", "name": "Кофе и чай" },
+  { "link": "category-page.html", "name": "Столовые приборы" },
+  { "link": "category-page.html", "name": "Изделия из стекла" },
+  { "link": "category-page.html", "name": "Текстиль" },
+  { "link": "category-page.html", "name": "Аксессуары для стола" }
 ]

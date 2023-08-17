@@ -1,7 +1,7 @@
 [
-  { "link": "#", "name": "Пледы" },
-  { "link": "#", "name": "Декор подушки" },
-  { "link": "#", "name": "Вазы" },
-  { "link": "#", "name": "Свечи и подсвечники" },
-  { "link": "#", "name": "Декоративные аксессуары" }
+  { "link": "category-page.html", "name": "Пледы" },
+  { "link": "category-page.html", "name": "Декор подушки" },
+  { "link": "category-page.html", "name": "Вазы" },
+  { "link": "category-page.html", "name": "Свечи и подсвечники" },
+  { "link": "category-page.html", "name": "Декоративные аксессуары" }
 ]

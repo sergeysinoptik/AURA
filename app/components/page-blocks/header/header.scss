@@ -58,7 +58,7 @@
   .inner {
     padding: 24px 40px;
     align-items: center;
-    transition: all 0.5s;
+    transition: all 0.5s padding .5s;
   }
   .logo img {
     width: 53px;
@@ -70,9 +70,11 @@
     margin-left: calc(80px - 53px);
   }
   .search {
-    visibility: hidden;
+    //visibility: hidden;
     transition: height .1s;
     height: 1px;
+    opacity: 0;
+    z-index: -20;
   }
   & + .main {
     padding-top: 87.5px;
@@ -84,8 +86,10 @@
 }
 
 .search_active {
-  visibility: visible !important;
+  //visibility: visible !important;
   margin-bottom: -15px;
+  opacity: 1 !important;
+  z-index: inherit !important;
 }
 
 .header-mob {

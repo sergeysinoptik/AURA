@@ -1,7 +1,7 @@
 [
-  { "link": "#", "name": "Постельное белье" },
-  { "link": "#", "name": "Покрывала" },
-  { "link": "#", "name": "Пледы" },
-  { "link": "#", "name": "Подушки" },
-  { "link": "#", "name": "одеяла" }
+  { "link": "category-page.html", "name": "Постельное белье" },
+  { "link": "category-page.html", "name": "Покрывала" },
+  { "link": "category-page.html", "name": "Пледы" },
+  { "link": "category-page.html", "name": "Подушки" },
+  { "link": "category-page.html", "name": "одеяла" }
 ]
