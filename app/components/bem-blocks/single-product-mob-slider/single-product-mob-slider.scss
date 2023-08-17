@@ -68,3 +68,19 @@
   left: 0;
   background: transparent;
 }
+
+@media screen and (max-width: 767px) {
+  .mfp-container {
+    padding: 10px;
+  }
+
+  .mfp-content {
+  width: 100% !important;
+  height: 100% !important;
+  padding: 0 !important;
+}
+.mfp-image-holder .mfp-content {
+  max-width: 100% !important;
+  max-height: min-content !important;
+}
+}
