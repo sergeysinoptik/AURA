@@ -1,7 +1,6 @@
 /* global document, window, select */
-const iconUser = document.querySelector('#icon-user');
-
 function userToggle() {
+  const iconUser = document.querySelector('#icon-user');
   const userDropdown = select('.user-dropdown');
 
   iconUser.addEventListener('click', () => {
@@ -18,8 +17,6 @@ function userToggle() {
     }
   });
 }
-
-window.onload = userToggle();
 
 const iconUserMob = document.querySelector('#icon-user-mob');
 
