@@ -1,7 +1,7 @@
 /* global document, window, select */
-function userToggle() {
-  const iconUser = document.querySelector('#icon-user');
-  const userDropdown = select('.user-dropdown');
+function userToggle(icon, dropdown) {
+  const iconUser = document.querySelector(icon);
+  const userDropdown = document.querySelector(dropdown);
 
   iconUser.addEventListener('click', () => {
     userDropdown.classList.toggle('user-dropdown_active');
@@ -18,10 +18,14 @@ function userToggle() {
   });
 }
 
+window.onload = userToggle('#icon-user', '.user-dropdown');
+
 const iconUserMob = document.querySelector('#icon-user-mob');
 
 function userToggleMob() {
-  const userDropdownMob = document.querySelector('.mobile-nav-account .user-dropdown');
+  const userDropdownMob = document.querySelector(
+    '.mobile-nav-account .user-dropdown'
+  );
 
   iconUserMob.addEventListener('click', () => {
     userDropdownMob.classList.toggle('user-dropdown_active');
@@ -38,5 +42,4 @@ function userToggleMob() {
   });
 }
 
-window.onload = userToggle();
 window.onload = userToggleMob();
