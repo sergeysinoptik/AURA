@@ -1,7 +1,7 @@
 /* global document, window, select */
 function userToggle(icon, dropdown) {
-  const iconUser = document.querySelector(icon);
-  const userDropdown = document.querySelector(dropdown);
+  const iconUser = select(icon);
+  const userDropdown = select(dropdown);
 
   iconUser.addEventListener('click', () => {
     userDropdown.classList.toggle('user-dropdown_active');
@@ -23,9 +23,7 @@ window.onload = userToggle('#icon-user', '.user-dropdown');
 const iconUserMob = document.querySelector('#icon-user-mob');
 
 function userToggleMob() {
-  const userDropdownMob = document.querySelector(
-    '.mobile-nav-account .user-dropdown'
-  );
+  const userDropdownMob = document.querySelector('.mobile-nav-account .user-dropdown');
 
   iconUserMob.addEventListener('click', () => {
     userDropdownMob.classList.toggle('user-dropdown_active');
